@@ -1,0 +1,973 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.1//EN" "http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="ko">
+
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=0" />
+    <title>stayplan</title>
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
+    <link href="./css/swiper.css" rel="stylesheet" type="text/css" />
+    <link href="./css/datepicker.css" rel="stylesheet" type="text/css" />
+    <link href="./css/default.css" rel="stylesheet" type="text/css" />
+    <link href="./css/layout.css" rel="stylesheet" type="text/css" />
+    <script type="text/javascript" src="./js/script.js"></script>
+    <script type="text/javascript" src="./js/swiper.js"></script>
+    <script type="text/javascript" src="./js/datepicker.js"></script>
+    <script type="text/javascript" src="./js/hotel_list.js"></script>
+    <link href="./css/hotel_list.css" rel="stylesheet" type="text/css" />
+    <script type="text/javascript" src="./plugin/slider_container.js"></script>
+    <link href="./plugin/slider_container.css" rel="stylesheet" type="text/css" />
+</head>
+
+<body>
+    <div id="wrap">
+        <!--header-->
+        <div id="header">
+            <!--wrap-->
+            <div class="wrap">
+                <h1><a href="index.html"><img src="./images/header_logo.png" alt="stayplan" /></a></h1>
+                <a href="#self" id="bt_menu"><i></i><i></i><i></i><i></i>메뉴열기</a>
+                <!--menu-->
+                <div id="menu">
+                    <a href="#self" class="bt_close">메뉴닫기</a>
+                    <ul class="tm">
+                        <li class="pc login"><a href="#self">로그인</a></li>
+                        <li class="mo"><a href="#self" class="bt_account">로그인하세요</a></li>
+                    </ul>
+                    <ul class="gnb_l">
+                        <li><a href="#self">호텔</a></li>
+                        <li><a href="#self">총 숙박요금 계산</a></li>
+                    </ul>
+                    <ul class="gnb_r">
+                        <li><a href="#self">이용가이드</a></li>
+                        <li><a href="#self">위시리스트</a></li>
+                    </ul>
+                </div>
+                <!--//menu-->
+            </div>
+            <!--//wrap-->
+
+            <div class="login-pop">
+                <div class="top cboth">
+                    <p class="text fl">로그인</p>
+                    <button class="close fr">
+                        <img src="./images/btn_layerpopup_close.png" alt="">
+                    </button>
+                </div>
+                <div class="input-module">
+                    <div class="sns-login">
+                        <a href="">
+                            <b>네이버 계정</b>으로 로그인
+                        </a>
+                        <a href="">
+                            <b>카카오 계정</b>으로 로그인
+                        </a>
+                    </div>
+                    <div class="line">
+                        또는
+                    </div>
+                    <div class="input-wrap">
+                        <form action="">
+                            <ul>
+                                <li>
+                                    <input type="text" placeholder="이메일주소 입력">
+                                </li>
+                                <li class="pw-x">
+                                    <input type="password" placeholder="비밀번호 입력">
+                                </li>
+                                <li class="cboth">
+                                    <a href="#pw-find" class="fl">
+                                        비밀번호를 잊으셨나요?
+                                    </a>
+                                    <input type="submit" value="로그인" class="fr">
+                                </li>
+                            </ul>
+                        </form>
+                    </div>
+                </div>
+                <div class="sign-wrap cboth">
+                    <p class="fl text">
+                        아직 계정이 없으신가요?
+                    </p>
+                    <a href="#sign" class="fr">
+                        회원가입
+                    </a>
+                </div>
+            </div>
+            <div class="pw-find-pop">
+                <div class="top cboth">
+                    <p class="text fl">비밀번호 변경</p>
+                    <button class="close fr">
+                        <img src="./images/btn_layerpopup_close.png" alt="">
+                    </button>
+                </div>
+                <div class="input-wrap">
+                    <p>아래 이메일 주소로 비밀번호 <span>재설정 링크</span>를 보내드립니다.</p>
+                    <div class="email">
+                        <input type="text" id="pw-email-input" placeholder="이메일주소 입력">
+                    </div>
+                    <div class="btn-wrap">
+                        <button href="">
+                            재설정 메일 발송
+                        </button>
+                    </div>
+                </div>
+                <div class="complete">
+                    <p>이메일 발송 완료</p>
+                    <p>
+                        수신한 메일의 링크에서<br>비밀번호를 재설정하세요.
+                    </p>
+                </div>
+            </div>
+            <div class="sign-pop">
+                <div class="top cboth">
+                    <p class="text fl">회원가입</p>
+                    <button class="close fr">
+                        <img src="./images/btn_layerpopup_close.png" alt="">
+                    </button>
+                </div>
+                <div class="input-module">
+                    <div class="sns-login">
+                        <a href="">
+                            <b>네이버 계정</b>으로 회원가입
+                        </a>
+                        <a href="">
+                            <b>카카오 계정</b>으로 회원가입
+                        </a>
+                    </div>
+                    <div class="line">
+                        또는
+                    </div>
+                    <div class="input-wrap">
+                        <form action="">
+                            <ul>
+                                <li class="email-x">
+                                    <input type="text" placeholder="이메일주소 입력">
+                                </li>
+                                <li>
+                                    <input type="password" placeholder="비밀번호 입력(6자 이상)">
+                                </li>
+                                <li>
+                                    <input type="password" placeholder="비밀번호 확인">
+                                </li>
+                                <li class="cboth">
+                                    <div class="check-wrap fl">
+                                        <input type="checkbox" id="sign-check" style="display: none;">
+                                        <label for="sign-check"></label>
+                                    </div>
+                                    <p class="fl">
+                                        스테이플랜의 <span>이용약관</span>과 <span>개인정보 보호정책</span>에 모두 동의합니다.
+                                    </p>
+                                </li>
+                                <li class="cboth">
+                                    <input type="submit" value="회원가입">
+                                </li>
+                            </ul>
+                        </form>
+                    </div>
+                </div>
+            </div>
+            <div class="bg"></div>
+        </div>
+        <!--//header-->
+        <!--hotel-list-wrap-->
+        <div class="hotel-list-wrap">
+            <div class="selected-info">
+                <div class="info-wrap cboth">
+                    <div class="left-box fl">
+                        <span class="nation">
+                            바르셀로나
+                        </span>
+                    </div>
+                    <div class="right-box fl cboth">
+                        <span class="term fl">
+                            2019.11.01 ~ 2019.11.09
+                        </span>
+                        <span class="term-text fl">
+                            8박
+                        </span>
+                        <span class="people-text fl">
+                            성인 2, 아동 0
+                        </span>
+                    </div>
+                </div>
+                <div class="re-search-wrap">
+                    <div class="info_box">
+                        <dl class="area on">
+                            <dd><input type="text" value="바르셀로나"></dd>
+                            <div class="area-auto">
+                                <ul>
+                                    <li>
+                                        <div class="container">
+                                            <div class="icon-wrap">
+                                                <img src="./images/icon_search_wish.png" alt="">
+                                            </div>
+                                            <div class="text-wrap">
+                                                <h2>더 아트스테이 제주 함덕 호텔(구.골든튤립)</h2>
+                                                <p>노보리베츠, 일본</p>
+                                            </div>
+                                        </div>
+                                    </li>
+                                    <li>
+                                        <div class="container">
+                                            <div class="icon-wrap">
+                                                <img src="./images/icon_search_seen.png" alt="">
+                                            </div>
+                                            <div class="text-wrap">
+                                                <h2>더 아남 디럭스 콜렉션</h2>
+                                                <p>노보리베츠, 일본</p>
+                                            </div>
+                                        </div>
+                                    </li>
+                                    <li>
+                                        <div class="container">
+                                            <div class="icon-wrap">
+                                                <img src="./images/icon_search_spot.png" alt="">
+                                            </div>
+                                            <div class="text-wrap">
+                                                <h2>다낭</h2>
+                                                <p>베트남</p>
+                                            </div>
+                                        </div>
+
+                                    </li>
+                                    <li>
+                                        <div class="container">
+                                            <div class="icon-wrap">
+                                                <img src="./images/icon_search_hotel.png" alt="">
+                                            </div>
+                                            <div class="text-wrap">
+                                                <h2>더 아웃포스트 호텔 센토사 바이 파 이스트 호스피탈리티</h2>
+                                                <p>노보리베츠, 일본</p>
+                                            </div>
+                                        </div>
+                                    </li>
+                                    <li>
+                                        <div class="container">
+                                            <div class="icon-wrap">
+                                                <img src="./images/icon_search_hotel.png" alt="">
+                                            </div>
+                                            <div class="text-wrap">
+                                                <h2>더 아웃포스트 호텔 센토사 바이 파 이스트 호스피탈리티</h2>
+                                                <p>노보리베츠, 일본</p>
+                                            </div>
+                                        </div>
+                                    </li>
+                                </ul>
+                            </div>
+                        </dl>
+                        <dl class="date in on">
+                            <dt>체크인</dt>
+                            <dd><input type="text" class="form-control" name="date" id="date" data-select="datepicker" autocomplete="off" value="2019.11.01"></dd>
+                        </dl>
+                        <dl class="date out on">
+                            <dt>체크아웃</dt>
+                            <dd><input type="text" class="form-control" name="date" id="date" data-select="datepicker" autocomplete="off" value="2019.11.01"></dd>
+                            <span class="day">
+                                8박
+                            </span>
+                        </dl>
+                        <dl class="pp_number on">
+                            <dt>인원 수</dt>
+                            <dd><input type="text" readonly="readonly" value="성인 2, 아동 0"></dd>
+                            <div class="people-select">
+                                <div class="container">
+                                    <ul>
+                                        <li class="people-type">
+                                            <div class="name">
+                                                성인
+                                            </div>
+                                            <div class="input-wrap">
+                                                <span class="input-number-decrement"></span><input class="input-number_01" type="numer" value="0명" min="0" max="100"><span class="input-number-increment"></span>
+                                            </div>
+                                        </li>
+                                        <li class="people-type">
+                                            <div class="name">
+                                                아동
+                                            </div>
+                                            <div class="input-wrap">
+                                                <span class="input-number-decrement"></span><input class="input-number_02" type="numer" value="0명" min="0" max="100"><span class="input-number-increment"></span>
+                                            </div>
+                                        </li>
+                                        <li class="people-age">
+                                            <div class="name">
+                                                아동1 나이
+                                            </div>
+                                            <div class="input-wrap">
+                                                <select name="" class="input-number-03">
+                                                    <option value="1">1세</option>
+                                                    <option value="2">2세</option>
+                                                    <option value="3">3세</option>
+                                                    <option value="4">4세</option>
+                                                    <option value="5">5세</option>
+                                                    <option value="6">6세</option>
+                                                    <option value="7">7세</option>
+                                                    <option value="8">8세</option>
+                                                    <option value="9">9세</option>
+                                                    <option value="10">10세</option>
+                                                    <option value="11">11세</option>
+                                                    <option value="12">12세</option>
+                                                    <option value="13">13세</option>
+                                                    <option value="14">14세</option>
+                                                    <option value="15">15세</option>
+                                                    <option value="16">16세</option>
+                                                    <option value="17">17세</option>
+                                                </select>
+                                            </div>
+                                        </li>
+                                        <li class="people-age">
+                                            <div class="name">
+                                                아동2 나이
+                                            </div>
+                                            <div class="input-wrap">
+                                                <select name="" class="input-number-04">
+                                                    <option value="1">1세</option>
+                                                    <option value="2">2세</option>
+                                                    <option value="3">3세</option>
+                                                    <option value="4">4세</option>
+                                                    <option value="5">5세</option>
+                                                    <option value="6">6세</option>
+                                                    <option value="7">7세</option>
+                                                    <option value="8">8세</option>
+                                                    <option value="9">9세</option>
+                                                    <option value="10">10세</option>
+                                                    <option value="11">11세</option>
+                                                    <option value="12">12세</option>
+                                                    <option value="13">13세</option>
+                                                    <option value="14">14세</option>
+                                                    <option value="15">15세</option>
+                                                    <option value="16">16세</option>
+                                                    <option value="17">17세</option>
+                                                </select>
+                                            </div>
+                                        </li>
+                                    </ul>
+                                </div>
+                                <div class="complete">
+                                    완료
+                                </div>
+                            </div>
+                        </dl>
+                    </div>
+                    <div class="btn-wrap">
+                        <ul class="cboth">
+                            <li class="fl">
+                                <a href="#close">
+                                    취소
+                                </a>
+                            </li>
+                            <li class="fr">
+                                <a href="">
+                                    검색
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <div class="select-module">
+                <ul class="cboth">
+                    <li class="fl cboth price-range">
+                        <div class="content fl">
+                            21,500원 ~ 2,200,000원
+                        </div>
+                        <div class="btn-wrap fl">
+                            <span class="top"></span>
+                            <span class="btm"></span>
+                        </div>
+                        <div class="price-range-pop">
+                            <div class="title">
+                                <span>
+                                    <img src="./images/icon_review_i.png" alt="">
+                                </span>
+                                <span>
+                                    1박당 가격
+                                </span>
+                            </div>
+                            <div class="row slider-labels cboth">
+                                <div class="col-xs-6 caption fl">
+                                    <span id="slider-range-value1"></span><span>원</span>
+                                </div>
+                                <div class="col-xs-6 text-right caption fr">
+                                    <span id="slider-range-value2"></span><span>원</span>
+                                </div>
+                            </div>
+                            <div class="slider-container">
+                                <div class="row">
+                                    <div class="col-sm-12">
+                                        <div id="slider-range"></div>
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="col-sm-12">
+                                        <form>
+                                            <input type="hidden" name="min-value" value="">
+                                            <input type="hidden" name="max-value" value="">
+                                        </form>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="btn-wrap">
+                                <button class="apply">
+                                    적용
+                                </button>
+                            </div>
+                        </div>
+                    </li>
+                    <li class="fl cboth rate-range">
+                        <div class="content fl cboth">
+                            <span class="icon fl">
+                                <img src="./images/icon_filter_star.png" alt="">
+                            </span>
+                            <span class="fl">1성급,2성급,4성급,5성급</span>
+                        </div>
+                        <div class="btn-wrap fl">
+                            <span class="top"></span>
+                            <span class="btm"></span>
+                        </div>
+                        <div class="rate-range-pop">
+                            <div class="all-check-wrap cboth">
+                                <input type="checkbox" id="rate-all-check" style="display: none;">
+                                <label for="rate-all-check" class="fl"></label>
+                                <span class="text fl">
+                                    전체 등급
+                                </span>
+                            </div>
+                            <div class="check-wrap">
+                                <input type="checkbox" id="rate-check-star-5" style="display: none;">
+                                <label for="rate-check-star-5" class="fl"></label>
+                                <span class="text fl">
+                                    5성급
+                                </span>
+                                <span class="fl cboth">
+                                    <img src="./images/icon_filter_star.png" alt="" class="fl">
+                                    <img src="./images/icon_filter_star.png" alt="" class="fl">
+                                    <img src="./images/icon_filter_star.png" alt="" class="fl">
+                                    <img src="./images/icon_filter_star.png" alt="" class="fl">
+                                    <img src="./images/icon_filter_star.png" alt="" class="fl">
+                                </span>
+                            </div>
+                            <div class="check-wrap">
+                                <input type="checkbox" id="rate-check-star-4" style="display: none;">
+                                <label for="rate-check-star-4" class="fl"></label>
+                                <span class="text fl">
+                                    4성급
+                                </span>
+                                <span class="fl cboth">
+                                    <img src="./images/icon_filter_star.png" alt="" class="fl">
+                                    <img src="./images/icon_filter_star.png" alt="" class="fl">
+                                    <img src="./images/icon_filter_star.png" alt="" class="fl">
+                                    <img src="./images/icon_filter_star.png" alt="" class="fl">
+                                </span>
+                            </div>
+                            <div class="check-wrap">
+                                <input type="checkbox" id="rate-check-star-3" style="display: none;">
+                                <label for="rate-check-star-3" class="fl"></label>
+                                <span class="text fl">
+                                    3성급
+                                </span>
+                                <span class="fl cboth">
+                                    <img src="./images/icon_filter_star.png" alt="" class="fl">
+                                    <img src="./images/icon_filter_star.png" alt="" class="fl">
+                                    <img src="./images/icon_filter_star.png" alt="" class="fl">
+                                </span>
+                            </div>
+                            <div class="check-wrap">
+                                <input type="checkbox" id="rate-check-star-2" style="display: none;">
+                                <label for="rate-check-star-2" class="fl"></label>
+                                <span class="text fl">
+                                    2성급
+                                </span>
+                                <span class="fl cboth">
+                                    <img src="./images/icon_filter_star.png" alt="" class="fl">
+                                    <img src="./images/icon_filter_star.png" alt="" class="fl">
+                                </span>
+                            </div>
+                            <div class="check-wrap">
+                                <input type="checkbox" id="rate-check-star-1" style="display: none;">
+                                <label for="rate-check-star-1" class="fl"></label>
+                                <span class="text fl">
+                                    1성급
+                                </span>
+                                <span class="fl cboth">
+                                    <img src="./images/icon_filter_star.png" alt="" class="fl">
+                                </span>
+                            </div>
+                            <div class="check-wrap">
+                                <input type="checkbox" id="check_none" style="display: none;">
+                                <label for="check_none" class="fl"></label>
+                                <span class="text fl">
+                                    평가 안 함
+                                </span>
+                            </div>
+                            <div class="btn-wrap">
+                                <button class="apply">
+                                    적용
+                                </button>
+                            </div>
+                        </div>
+                    </li>
+                    <li class="fl cboth review-range">
+                        <div class="content fl">
+                            <span class="rate fl">
+                                8.0
+                            </span>
+                            <span class="fl">“아주좋음”</span>
+                        </div>
+                        <div class="btn-wrap fl">
+                            <span class="top"></span>
+                            <span class="btm"></span>
+                        </div>
+                        <div class="review-range-pop">
+                            <div class="all-check-wrap cboth">
+                                <input type="checkbox" id="review-all-check" style="display: none;">
+                                <label for="review-all-check" class="fl"></label>
+                                <span class="text fl">
+                                    전체 평점
+                                </span>
+                            </div>
+                            <div class="check-wrap">
+                                <input type="checkbox" id="review-check_star_5" style="display: none;">
+                                <label for="review-check_star_5" class="fl"></label>
+                                <span class="card tomato fl">
+                                    9.0
+                                </span>
+                                <span class="fl cboth">
+                                    최고
+                                </span>
+                            </div>
+                            <div class="check-wrap">
+                                <input type="checkbox" id="review-check_star_4" style="display: none;">
+                                <label for="review-check_star_4" class="fl"></label>
+                                <span class="card blue fl">
+                                    8.0
+                                </span>
+                                <span class="fl cboth">
+                                    아주좋음
+                                </span>
+                            </div>
+                            <div class="check-wrap">
+                                <input type="checkbox" id="review-check_star_3" style="display: none;">
+                                <label for="review-check_star_3" class="fl"></label>
+                                <span class="card green fl">
+                                    7.0
+                                </span>
+                                <span class="fl cboth">
+                                    좋음
+                                </span>
+                            </div>
+                            <div class="check-wrap">
+                                <input type="checkbox" id="review-check_star_2" style="display: none;">
+                                <label for="review-check_star_2" class="fl"></label>
+                                <span class="card yellow fl">
+                                    6.0
+                                </span>
+                                <span class="fl cboth">
+                                    보통
+                                </span>
+                            </div>
+                            <div class="btn-wrap">
+                                <button class="apply">
+                                    적용
+                                </button>
+                            </div>
+                        </div>
+                    </li>
+                    <li class="fl">
+                        <button>
+                            초기화
+                        </button>
+                    </li>
+                </ul>
+            </div>
+            <div class="search-result-wrap">
+                <div class="line"></div>
+                <div class="container">
+                    <div class="top-wrap cboth">
+                        <p class="fl">
+                            <span>4,193</span>개의 숙소가 있습니다
+                        </p>
+<!--
+                        <div class="control-wrap fr">
+                            <div class="content fl cboth">
+                                <span class="fl">추천 순</span>
+                            </div>
+                            <div class="btn-wrap fl">
+                                <span class="top"></span>
+                                <span class="btm"></span>
+                            </div>
+                        </div>
+-->
+                    </div>
+                    <div class="list-wrap">
+                        <ul>
+                            <li class="cboth">
+                                <div class="img-box fl">
+                                    <img src="./images/jeju.jpg" alt="">
+                                    <span class="good-btn">
+                                        <img src="./images/btn_wish_nor.png" alt="">
+                                    </span>
+                                </div>
+                                <div class="info-box fl">
+                                    <a href="" class="left-click-space"></a>
+                                    <div class="top cboth">
+                                        <div class="left fl cboth">
+                                            <span class="rate fl tomato">
+                                                9.0
+                                            </span>
+                                            <span class="review fl">
+                                                "최고"
+                                            </span>
+                                            <span class="standard fl cboth">
+                                                <img src="./images/icon_review_i.png" alt="" class="fl">
+                                                <span class="fl">
+                                                    1,221개의 이용후기 기준
+                                                </span>
+                                            </span>
+                                        </div>
+                                        <div class="right fr cboth">
+                                            <span class="icon cboth fl">
+                                                <img src="./images/icon_hotelstar_sel.png" alt="" class="fl">
+                                                <img src="./images/icon_hotelstar_sel.png" alt="" class="fl">
+                                                <img src="./images/icon_hotelstar_sel.png" alt="" class="fl">
+                                                <img src="./images/icon_hotelstar_sel.png" alt="" class="fl">
+                                                <img src="./images/icon_hotelstar_sel.png" alt="" class="fl">
+                                            </span>
+                                            <span class="text fl">
+                                                5성급
+                                            </span>
+                                        </div>
+                                    </div>
+                                    <div class="middle cboth">
+                                        <div class="subject fl">
+                                            <div class="hotel-name">
+                                                키멧키멧 바르셀로나키멧키멧 바르셀로나키멧키멧 바르셀로나 키멧키멧 바르셀로나키멧키멧 바르셀로나키멧키멧 바르셀로나 키멧키멧 바르셀로나
+                                            </div>
+                                            <div class="info cboth">
+                                                <span class="fl">서울, 중구</span>
+                                                <span class="fl">경복궁역 0.8km</span>
+                                            </div>
+                                        </div>
+                                        <div class="right fr cboth">
+                                            <div class="price cboth">
+                                                <span class="fl">
+                                                    86,395원
+                                                </span>
+                                                <span class="fl">
+                                                    86,395원
+                                                </span>
+                                            </div>
+                                            <div class="info">
+                                                <div class="wrap cboth">
+                                                    <span class="fl">
+                                                        아고다
+                                                    </span>
+                                                    <span class="fl">
+                                                        2박 최저가
+                                                    </span>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="btm cboth">
+                                        <div class="option fl cboth">
+                                            <span class="fl">
+                                                무료 와이파이
+                                            </span>
+                                            <span class="fl">
+                                                조식 포함
+                                            </span>
+                                            <span class="fl">
+                                                무료 취소
+                                            </span>
+                                        </div>
+                                        <div class="fr">
+                                            <a href="">
+                                                예약
+                                            </a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </li>
+                            <li class="cboth">
+                                <div class="img-box fl">
+                                    <img src="./images/jeju.jpg" alt="">
+                                    <span class="good-btn">
+                                        <img src="./images/btn_wish_nor.png" alt="">
+                                    </span>
+                                </div>
+                                <div class="info-box fl">
+                                   <a href="" class="left-click-space"></a>
+                                    <div class="top cboth">
+                                        <div class="left fl cboth">
+                                            <span class="rate fl blue">
+                                                8.5
+                                            </span>
+                                            <span class="review fl">
+                                                "아주좋음"
+                                            </span>
+                                            <span class="standard fl cboth">
+                                                <img src="./images/icon_review_i.png" alt="" class="fl">
+                                                <span class="fl">
+                                                    1,221개의 이용후기 기준
+                                                </span>
+                                            </span>
+                                        </div>
+                                        <div class="right fr cboth">
+                                            <span class="icon cboth fl">
+                                                <img src="./images/icon_hotelstar_sel.png" alt="" class="fl">
+                                                <img src="./images/icon_hotelstar_sel.png" alt="" class="fl">
+                                            </span>
+                                            <span class="text fl">
+                                                2성급
+                                            </span>
+                                        </div>
+                                    </div>
+                                    <div class="middle cboth">
+                                        <div class="subject fl">
+                                            <div class="hotel-name">
+                                                로다몬 바르셀로나 호텔
+                                            </div>
+                                            <div class="info cboth">
+                                                <span class="fl">서울, 중구</span>
+                                                <span class="fl">경복궁역 0.8km</span>
+                                            </div>
+                                        </div>
+                                        <div class="right fr cboth">
+                                            <div class="price cboth">
+                                                <span class="fl">
+                                                    86,395원
+                                                </span>
+                                                <span class="fl">
+                                                    86,395원
+                                                </span>
+                                            </div>
+                                            <div class="info">
+                                                <div class="wrap cboth">
+                                                    <span class="fl">
+                                                        아고다
+                                                    </span>
+                                                    <span class="fl">
+                                                        2박 최저가
+                                                    </span>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="btm cboth">
+                                        <div class="option fl cboth">
+                                            <span class="fl">
+                                                무료 와이파이
+                                            </span>
+                                            <span class="fl">
+                                                조식 포함
+                                            </span>
+                                            <span class="fl">
+                                                무료 취소
+                                            </span>
+                                        </div>
+                                        <div class="fr">
+                                            <a href="">
+                                                예약
+                                            </a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </li>
+                            <li class="cboth">
+                                <div class="img-box fl">
+                                    <img src="./images/jeju.jpg" alt="">
+                                    <span class="good-btn">
+                                        <img src="./images/btn_wish_nor.png" alt="">
+                                    </span>
+                                </div>
+                                <div class="info-box fl">
+                                   <a href="" class="left-click-space"></a>
+                                    <div class="top cboth">
+                                        <div class="left fl cboth">
+                                            <span class="rate fl green">
+                                                7.0
+                                            </span>
+                                            <span class="review fl">
+                                                "좋음"
+                                            </span>
+                                            <span class="standard fl cboth">
+                                                <img src="./images/icon_review_i.png" alt="" class="fl">
+                                                <span class="fl">
+                                                    1,221개의 이용후기 기준
+                                                </span>
+                                            </span>
+                                        </div>
+                                        <div class="right fr cboth">
+                                            <span class="icon cboth fl">
+                                                <img src="./images/icon_hotelstar_sel.png" alt="" class="fl">
+                                            </span>
+                                            <span class="text fl">
+                                                1성급
+                                            </span>
+                                        </div>
+                                    </div>
+                                    <div class="middle cboth">
+                                        <div class="subject fl">
+                                            <div class="hotel-name">
+                                                로다몬 바르셀로나 호텔
+                                            </div>
+                                            <div class="info cboth">
+                                                <span class="fl">서울, 중구</span>
+                                                <span class="fl">경복궁역 0.8km</span>
+                                            </div>
+                                        </div>
+                                        <div class="right fr cboth">
+                                            <div class="price cboth">
+                                                <span class="fl">
+                                                    86,395원
+                                                </span>
+                                                <span class="fl">
+                                                    86,395원
+                                                </span>
+                                            </div>
+                                            <div class="info">
+                                                <div class="wrap cboth">
+                                                    <span class="fl">
+                                                        아고다
+                                                    </span>
+                                                    <span class="fl">
+                                                        2박 최저가
+                                                    </span>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="btm cboth">
+                                        <div class="fr">
+                                            <a href="">
+                                                예약
+                                            </a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </li>
+                            <li class="cboth">
+                                <div class="img-box fl">
+                                    <img src="./images/jeju.jpg" alt="">
+                                    <span class="good-btn">
+                                        <img src="./images/btn_wish_nor.png" alt="">
+                                    </span>
+                                </div>
+                                <div class="info-box fl">
+                                   <a href="" class="left-click-space"></a>
+                                    <div class="top cboth">
+                                        <div class="left fl cboth">
+                                            <span class="rate fl yellow">
+                                                8.5
+                                            </span>
+                                            <span class="review fl">
+                                                "보통"
+                                            </span>
+                                            <span class="standard fl cboth">
+                                                <img src="./images/icon_review_i.png" alt="" class="fl">
+                                                <span class="fl">
+                                                    1,221개의 이용후기 기준
+                                                </span>
+                                            </span>
+                                        </div>
+                                        <div class="right fr cboth">
+                                            <span class="icon cboth fl">
+                                                <img src="./images/icon_hotelstar_nor.png" alt="" class="fl">
+                                            </span>
+                                            <span class="text fl">
+                                                평가안함
+                                            </span>
+                                        </div>
+                                    </div>
+                                    <div class="middle cboth">
+                                        <div class="subject fl">
+                                            <div class="hotel-name">
+                                                로다몬 바르셀로나 호텔
+                                            </div>
+                                            <div class="info cboth">
+                                                <span class="fl">서울, 중구</span>
+                                                <span class="fl">경복궁역 0.8km</span>
+                                            </div>
+                                        </div>
+                                        <div class="right fr cboth">
+                                            <div class="price cboth">
+                                                <span class="fl">
+                                                    86,395원
+                                                </span>
+                                                <span class="fl">
+                                                    86,395원
+                                                </span>
+                                            </div>
+                                            <div class="info">
+                                                <div class="wrap cboth">
+                                                    <span class="fl">
+                                                        아고다
+                                                    </span>
+                                                    <span class="fl">
+                                                        2박 최저가
+                                                    </span>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="btm cboth">
+                                        <div class="option fl cboth">
+                                            <span class="fl">
+                                                무료 와이파이
+                                            </span>
+                                            <span class="fl">
+                                                조식 포함
+                                            </span>
+                                            <span class="fl">
+                                                무료 취소
+                                            </span>
+                                        </div>
+                                        <div class="fr">
+                                            <a href="">
+                                                예약
+                                            </a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="more-wrap">
+                        <a href="">
+                            <b>103,029개</b>의 호텔 더보기
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!--//hotel-list-wrap-->
+        <!--footer-->
+        <div id="footer">
+            <!--wrap-->
+            <div class="wrap">
+                <ul class="fm">
+                    <li><a href="#self">이용가이드</a></li>
+                    <li><a href="#self">이용약관</a></li>
+                    <li><a href="#self">개인정보보호정책</a></li>
+                </ul>
+                <div class="g_info">
+                    <span>주소: 서울시 중구 청계천로 8층</span>
+                    <span>사업자등록번호: 217-81-38971</span>
+                    <span>통신판매업신고번호: 2018-서울중구-1932</span>
+                </div>
+                <div class="contact">Contact: <a href="mailto:biz@stayplan.me">biz@stayplan.me</a></div>
+                <ul class="f_sns">
+                    <li><a href="#self">블로그</a></li>
+                    <li><a href="#self">인스타그램</a></li>
+                    <li><a href="#self">페이스북</a></li>
+                </ul>
+                <div class="copyright">Copyright ⓒ 2019 by stayplan.me All Rights Reserved.</div>
+            </div>
+            <!--//wrap-->
+        </div>
+        <!--//footer-->
+    </div>
+</body>
+
+</html>

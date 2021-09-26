@@ -1,0 +1,2336 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.1//EN" "http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="ko">
+
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=0" />
+    <title>stayplan</title>
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
+    <link href="./../css/swiper.css" rel="stylesheet" type="text/css" />
+    <link href="./../css/default.css" rel="stylesheet" type="text/css" />
+    <link href="./css/datepicker.css" rel="stylesheet" type="text/css" />
+    <script type="text/javascript" src="./../js/swiper.js"></script>
+    <script type="text/javascript" src="./js/calc_after_plan1.js"></script>
+    <script type="text/javascript" src="./js/datepicker.js"></script>
+    <script type="text/javascript" src="./js/layout.js"></script>
+    <!--mobile css-->
+    <link href="./css/layout.css" rel="stylesheet" type="text/css" />
+    <link href="./css/calc_after.css" rel="stylesheet" type="text/css" />
+</head>
+
+<body>
+    <div id="header">
+        <div class="header-wrap cboth">
+            <div class="logo fl">
+                <img src="./images/header_logo.png" alt="">
+            </div>
+            <div class="menu fr">
+                <img src="./images/bt_menu.gif" alt="">
+            </div>
+        </div>
+        <div class="header-contents">
+            <div class="top cboth">
+                <div class="title fl cboth">
+                    <a href="">
+                        <img src="./images/icon_profile.png" alt="" class="fl">
+                        <p class="fl">계정</p>
+                    </a>
+                </div>
+                <div class="close fr">
+                    <img src="./images/btn_header_close_grey.png" alt="">
+                </div>
+            </div>
+            <div class="contents">
+                <ul>
+                    <li>
+                        <a href="">
+                            <b>호텔</b>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="">
+                            <b>총 숙박요금 계산</b>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="">
+                            이용가이드
+                        </a>
+                    </li>
+                    <li>
+                        <a href="">
+                            위시리스트
+                        </a>
+                    </li>
+                </ul>
+                <div class="btn-wrap cboth">
+                    <a href="" class="fl">
+                        비밀번호 변경
+                    </a>
+                    <a href="" class="fl">
+                        로그아웃
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="calc-after-wrap">
+        <div class="selected-info">
+            <div class="search-icon">
+                <img src="./images/icon_search_w.png" alt="">
+            </div>
+            <div class="info-wrap">
+                <div class="top cboth">
+                    <span class="date fl">
+                        2019.11.01부터
+                    </span>
+                    <span class="people fl">
+                        성인 2, 아동 0
+                    </span>
+                </div>
+                <div class="btm">
+                    <span class="text">
+                        2개의 플랜이 계산되었습니다.
+                    </span>
+                </div>
+            </div>
+        </div>
+        <div class="plan-list-wrap">
+            <div class="plan plan1 myplan">
+                <div class="title-wrap">
+                    나의 플랜
+                </div>
+                <div class="contents">
+                    <div class="top-info">
+                        <div class="price">
+                            333,330원
+                        </div>
+                        <div class="night">
+                            <span>3개의 호텔</span>에서 <span>8박</span>
+                        </div>
+                    </div>
+                    <div class="list-wrap">
+                        <ul>
+                            <li class="plan-li">
+                                <div class="container">
+                                    <div class="top-box">
+                                        <div class="top">
+                                            <a href="" class="hotel-name">
+                                                라마다 서울라마다 서울라마다 서울라마다 서울
+                                            </a>
+                                        </div>
+                                        <div class="btm cboth">
+                                            <div class="sub-text fl">
+                                                슈페이러트윈룸
+                                            </div>
+                                            <a href="#change" class="fl hotel-change-action">
+                                                객실변경
+                                            </a>
+                                        </div>
+                                        <div class="include-text">
+                                            조식포함, 석식포함
+                                        </div>
+                                    </div>
+                                    <a href="" class="btm-box">
+                                        <div class="date">
+                                            11.01.목 - 11.03.토
+                                        </div>
+                                        <div class="wrap">
+                                            <div class="night">
+                                                2박 아고다
+                                            </div>
+                                            <div class="price">
+                                                86,395원
+                                            </div>
+                                        </div>
+                                    </a>
+                                </div>
+                                <div class="hotel-change-pop">
+                                    <div class="top cboth">
+                                        <img src="./images/icon_roomchoice_i.png" alt="" class="fl">
+                                        <div class="text fl">
+                                            변경을 원하는 객실을 선택하세요.
+                                        </div>
+                                    </div>
+                                    <div class="contents">
+                                        <ul>
+                                            <li class="cboth">
+                                                <div class="left fl">
+                                                    <div class="check-wrap">
+                                                        <input type="radio" id="hotel-select-02-01" style="display: none;" name="hotel-select-02">
+                                                        <label for="hotel-select-02-01" class="fl"></label>
+                                                    </div>
+                                                </div>
+                                                <div class="right fl">
+                                                    <div class="text">
+                                                        <p class="room-name">객실명객실명</p>
+                                                        <p class="option">옵션명옵션명</p>
+                                                    </div>
+                                                    <div class="info">
+                                                        <p class="night">아고다</p>
+                                                        <p class="price">86,395원</p>
+                                                    </div>
+                                                </div>
+                                            </li>
+                                            <li class="cboth">
+                                                <div class="left fl">
+                                                    <div class="check-wrap">
+                                                        <input type="radio" id="hotel-select-02-02" style="display: none;" name="hotel-select-02">
+                                                        <label for="hotel-select-02-02" class="fl"></label>
+                                                    </div>
+                                                </div>
+                                                <div class="right fl">
+                                                    <div class="text">
+                                                        <p class="room-name">객실명객실명</p>
+                                                        <p class="option">옵션명옵션명</p>
+                                                    </div>
+                                                    <div class="info">
+                                                        <p class="night">아고다</p>
+                                                        <p class="price">86,395원</p>
+                                                    </div>
+                                                </div>
+                                            </li>
+                                            <li class="cboth">
+                                                <div class="left fl">
+                                                    <div class="check-wrap">
+                                                        <input type="radio" id="hotel-select-02-03" style="display: none;" name="hotel-select-02">
+                                                        <label for="hotel-select-02-03" class="fl"></label>
+                                                    </div>
+                                                </div>
+                                                <div class="right fl">
+                                                    <div class="text">
+                                                        <p class="room-name">객실명객실명</p>
+                                                        <p class="option">옵션명옵션명</p>
+                                                    </div>
+                                                    <div class="info">
+                                                        <p class="night">아고다</p>
+                                                        <p class="price">86,395원</p>
+                                                    </div>
+                                                </div>
+                                            </li>
+                                            <li class="cboth">
+                                                <div class="left fl">
+                                                    <div class="check-wrap">
+                                                        <input type="radio" id="hotel-select-02-04" style="display: none;" name="hotel-select-02">
+                                                        <label for="hotel-select-02-04" class="fl"></label>
+                                                    </div>
+                                                </div>
+                                                <div class="right fl">
+                                                    <div class="text">
+                                                        <p class="room-name">객실명객실명</p>
+                                                        <p class="option">옵션명옵션명</p>
+                                                    </div>
+                                                    <div class="info">
+                                                        <p class="night">아고다</p>
+                                                        <p class="price">86,395원</p>
+                                                    </div>
+                                                </div>
+                                            </li>
+                                            <li class="cboth">
+                                                <div class="left fl">
+                                                    <div class="check-wrap">
+                                                        <input type="radio" id="hotel-select-02-05" style="display: none;" name="hotel-select-02">
+                                                        <label for="hotel-select-02-05" class="fl"></label>
+                                                    </div>
+                                                </div>
+                                                <div class="right fl">
+                                                    <div class="text">
+                                                        <p class="room-name">객실명객실명</p>
+                                                        <p class="option">옵션명옵션명</p>
+                                                    </div>
+                                                    <div class="info">
+                                                        <p class="night">아고다</p>
+                                                        <p class="price">86,395원</p>
+                                                    </div>
+                                                </div>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                    <div class="more-btn">
+                                        더보기 +
+                                    </div>
+                                </div>
+                            </li>
+                            <li class="plan-li">
+                                <div class="container">
+                                    <div class="top-box">
+                                        <div class="top">
+                                            <a href="" class="hotel-name">
+                                                롯데호텔 서울
+                                            </a>
+                                        </div>
+                                        <div class="btm cboth">
+                                            <div class="sub-text fl">
+                                                슈페이러트윈룸
+                                            </div>
+                                            <a href="#change" class="fl hotel-change-action">
+                                                객실변경
+                                            </a>
+                                        </div>
+                                        <div class="include-text">
+                                            조식포함, 석식포함
+                                        </div>
+                                    </div>
+                                    <a href="" class="btm-box">
+                                        <div class="date">
+                                            11.01.목 - 11.03.토
+                                        </div>
+                                        <div class="wrap">
+                                            <div class="night">
+                                                2박 아고다
+                                            </div>
+                                            <div class="price">
+                                                86,395원
+                                            </div>
+                                        </div>
+                                    </a>
+                                </div>
+                                <div class="hotel-change-pop">
+                                    <div class="top cboth">
+                                        <img src="./images/icon_roomchoice_i.png" alt="" class="fl">
+                                        <div class="text fl">
+                                            변경을 원하는 객실을 선택하세요.
+                                        </div>
+                                    </div>
+                                    <div class="contents">
+                                        <ul>
+                                            <li class="cboth">
+                                                <div class="left fl">
+                                                    <div class="check-wrap">
+                                                        <input type="checkbox" id="hotel-select-01" style="display: none;">
+                                                        <label for="hotel-select-01" class="fl"></label>
+                                                    </div>
+                                                </div>
+                                                <div class="right fl">
+                                                    <div class="text">
+                                                        <p class="room-name">객실명객실명</p>
+                                                        <p class="option">옵션명옵션명</p>
+                                                    </div>
+                                                    <div class="info">
+                                                        <p class="night">아고다</p>
+                                                        <p class="price">86,395원</p>
+                                                    </div>
+                                                </div>
+                                            </li>
+                                            <li class="cboth">
+                                                <div class="left fl">
+                                                    <div class="check-wrap">
+                                                        <input type="checkbox" id="hotel-select-01" style="display: none;">
+                                                        <label for="hotel-select-01" class="fl"></label>
+                                                    </div>
+                                                </div>
+                                                <div class="right fl">
+                                                    <div class="text">
+                                                        <p class="room-name">객실명객실명</p>
+                                                        <p class="option">옵션명옵션명</p>
+                                                    </div>
+                                                    <div class="info">
+                                                        <p class="night">아고다</p>
+                                                        <p class="price">86,395원</p>
+                                                    </div>
+                                                </div>
+                                            </li>
+                                            <li class="cboth">
+                                                <div class="left fl">
+                                                    <div class="check-wrap">
+                                                        <input type="checkbox" id="hotel-select-01" style="display: none;">
+                                                        <label for="hotel-select-01" class="fl"></label>
+                                                    </div>
+                                                </div>
+                                                <div class="right fl">
+                                                    <div class="text">
+                                                        <p class="room-name">객실명객실명</p>
+                                                        <p class="option">옵션명옵션명</p>
+                                                    </div>
+                                                    <div class="info">
+                                                        <p class="night">아고다</p>
+                                                        <p class="price">86,395원</p>
+                                                    </div>
+                                                </div>
+                                            </li>
+                                            <li class="cboth">
+                                                <div class="left fl">
+                                                    <div class="check-wrap">
+                                                        <input type="checkbox" id="hotel-select-01" style="display: none;">
+                                                        <label for="hotel-select-01" class="fl"></label>
+                                                    </div>
+                                                </div>
+                                                <div class="right fl">
+                                                    <div class="text">
+                                                        <p class="room-name">객실명객실명</p>
+                                                        <p class="option">옵션명옵션명</p>
+                                                    </div>
+                                                    <div class="info">
+                                                        <p class="night">아고다</p>
+                                                        <p class="price">86,395원</p>
+                                                    </div>
+                                                </div>
+                                            </li>
+                                            <li class="cboth">
+                                                <div class="left fl">
+                                                    <div class="check-wrap">
+                                                        <input type="checkbox" id="hotel-select-01" style="display: none;">
+                                                        <label for="hotel-select-01" class="fl"></label>
+                                                    </div>
+                                                </div>
+                                                <div class="right fl">
+                                                    <div class="text">
+                                                        <p class="room-name">객실명객실명</p>
+                                                        <p class="option">옵션명옵션명</p>
+                                                    </div>
+                                                    <div class="info">
+                                                        <p class="night">아고다</p>
+                                                        <p class="price">86,395원</p>
+                                                    </div>
+                                                </div>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                    <div class="more-btn">
+                                        더보기 +
+                                    </div>
+                                </div>
+                            </li>
+                            <li class="plan-li">
+                                <div class="container">
+                                    <div class="top-box">
+                                        <div class="top">
+                                            <a href="" class="hotel-name">
+                                                롯데 호텔 서울
+                                            </a>
+                                        </div>
+                                        <div class="btm cboth">
+                                            <div class="sub-text fl">
+                                                슈페이러트윈룸
+                                            </div>
+                                            <a href="#change" class="fl hotel-change-action">
+                                                객실변경
+                                            </a>
+                                        </div>
+                                        <div class="include-text">
+                                            조식포함, 석식포함
+                                        </div>
+                                    </div>
+                                    <a href="" class="btm-box">
+                                        <div class="date">
+                                            11.01.목 - 11.03.토
+                                        </div>
+                                        <div class="wrap">
+                                            <div class="night">
+                                                2박 아고다
+                                            </div>
+                                            <div class="price">
+                                                86,395원
+                                            </div>
+                                        </div>
+                                    </a>
+                                </div>
+                                <div class="hotel-change-pop">
+                                    <div class="top cboth">
+                                        <img src="./images/icon_roomchoice_i.png" alt="" class="fl">
+                                        <div class="text fl">
+                                            변경을 원하는 객실을 선택하세요.
+                                        </div>
+                                    </div>
+                                    <div class="contents">
+                                        <ul>
+                                            <li class="cboth">
+                                                <div class="left fl">
+                                                    <div class="check-wrap">
+                                                        <input type="radio" id="hotel-select-03-01" style="display: none;" name="hotel-select-03">
+                                                        <label for="hotel-select-03-01" class="fl"></label>
+                                                    </div>
+                                                </div>
+                                                <div class="right fl">
+                                                    <div class="text">
+                                                        <p class="room-name">객실명객실명</p>
+                                                        <p class="option">옵션명옵션명</p>
+                                                    </div>
+                                                    <div class="info">
+                                                        <p class="night">아고다</p>
+                                                        <p class="price">86,395원</p>
+                                                    </div>
+                                                </div>
+                                            </li>
+                                            <li class="cboth">
+                                                <div class="left fl">
+                                                    <div class="check-wrap">
+                                                        <input type="radio" id="hotel-select-03-02" style="display: none;" name="hotel-select-03">
+                                                        <label for="hotel-select-03-02" class="fl"></label>
+                                                    </div>
+                                                </div>
+                                                <div class="right fl">
+                                                    <div class="text">
+                                                        <p class="room-name">객실명객실명</p>
+                                                        <p class="option">옵션명옵션명</p>
+                                                    </div>
+                                                    <div class="info">
+                                                        <p class="night">아고다</p>
+                                                        <p class="price">86,395원</p>
+                                                    </div>
+                                                </div>
+                                            </li>
+                                            <li class="cboth">
+                                                <div class="left fl">
+                                                    <div class="check-wrap">
+                                                        <input type="radio" id="hotel-select-03-03" style="display: none;" name="hotel-select-03">
+                                                        <label for="hotel-select-03-03" class="fl"></label>
+                                                    </div>
+                                                </div>
+                                                <div class="right fl">
+                                                    <div class="text">
+                                                        <p class="room-name">객실명객실명</p>
+                                                        <p class="option">옵션명옵션명</p>
+                                                    </div>
+                                                    <div class="info">
+                                                        <p class="night">아고다</p>
+                                                        <p class="price">86,395원</p>
+                                                    </div>
+                                                </div>
+                                            </li>
+                                            <li class="cboth">
+                                                <div class="left fl">
+                                                    <div class="check-wrap">
+                                                        <input type="radio" id="hotel-select-03-04" style="display: none;" name="hotel-select-03">
+                                                        <label for="hotel-select-03-04" class="fl"></label>
+                                                    </div>
+                                                </div>
+                                                <div class="right fl">
+                                                    <div class="text">
+                                                        <p class="room-name">객실명객실명</p>
+                                                        <p class="option">옵션명옵션명</p>
+                                                    </div>
+                                                    <div class="info">
+                                                        <p class="night">아고다</p>
+                                                        <p class="price">86,395원</p>
+                                                    </div>
+                                                </div>
+                                            </li>
+                                            <li class="cboth">
+                                                <div class="left fl">
+                                                    <div class="check-wrap">
+                                                        <input type="radio" id="hotel-select-03-05" style="display: none;" name="hotel-select-03">
+                                                        <label for="hotel-select-03-05" class="fl"></label>
+                                                    </div>
+                                                </div>
+                                                <div class="right fl">
+                                                    <div class="text">
+                                                        <p class="room-name">객실명객실명</p>
+                                                        <p class="option">옵션명옵션명</p>
+                                                    </div>
+                                                    <div class="info">
+                                                        <p class="night">아고다</p>
+                                                        <p class="price">86,395원</p>
+                                                    </div>
+                                                </div>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                    <div class="more-btn">
+                                        더보기 +
+                                    </div>
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+                    <span class="share">
+                        <a href="#share">플랜 공유하기</a>
+                    </span>
+                </div>
+            </div>
+            <div class="plan plan2 proposeplan">
+                <div class="title-wrap">
+                    3개의 추가 플랜 제안
+                </div>
+                <div class="contents">
+                    <div class="top-info">
+                        <div class="price">
+                            333,330원
+                        </div>
+                        <div class="night">
+                            <span>3개의 호텔</span>에서 <span>8박</span>
+                        </div>
+                    </div>
+                    <div class="list-wrap">
+                        <ul>
+                            <li class="plan-li">
+                                <div class="container">
+                                    <div class="top-box">
+                                        <div class="top">
+                                            <a href="" class="hotel-name">
+                                                라마다 서울라마다 서울라마다 서울라마다 서울
+                                            </a>
+                                        </div>
+                                        <div class="btm cboth">
+                                            <div class="sub-text fl">
+                                                슈페이러트윈룸
+                                            </div>
+                                            <a href="#change" class="fl hotel-change-action">
+                                                객실변경
+                                            </a>
+                                        </div>
+                                        <div class="include-text">
+                                            조식포함, 석식포함
+                                        </div>
+                                    </div>
+                                    <a href="" class="btm-box">
+                                        <div class="date">
+                                            11.01.목 - 11.03.토
+                                        </div>
+                                        <div class="wrap">
+                                            <div class="night">
+                                                2박 아고다
+                                            </div>
+                                            <div class="price">
+                                                86,395원
+                                            </div>
+                                        </div>
+                                    </a>
+                                </div>
+                                <div class="hotel-change-pop">
+                                    <div class="top cboth">
+                                        <img src="./images/icon_roomchoice_i.png" alt="" class="fl">
+                                        <div class="text fl">
+                                            변경을 원하는 객실을 선택하세요.
+                                        </div>
+                                    </div>
+                                    <div class="contents">
+                                        <ul>
+                                            <li class="cboth">
+                                                <div class="left fl">
+                                                    <div class="check-wrap">
+                                                        <input type="radio" id="hotel-select-04-01" style="display: none;" name="hotel-select-04">
+                                                        <label for="hotel-select-04-01" class="fl"></label>
+                                                    </div>
+                                                </div>
+                                                <div class="right fl">
+                                                    <div class="text">
+                                                        <p class="room-name">객실명객실명객실명객실명객실명객실명객실명객실명객실명객실명객실명객실명</p>
+                                                        <p class="option">옵션명옵션명</p>
+                                                    </div>
+                                                    <div class="info">
+                                                        <p class="night">아고다</p>
+                                                        <p class="price">86,395원</p>
+                                                    </div>
+                                                </div>
+                                            </li>
+                                            <li class="cboth">
+                                                <div class="left fl">
+                                                    <div class="check-wrap">
+                                                        <input type="radio" id="hotel-select-04-02" style="display: none;" name="hotel-select-04">
+                                                        <label for="hotel-select-04-02" class="fl"></label>
+                                                    </div>
+                                                </div>
+                                                <div class="right fl">
+                                                    <div class="text">
+                                                        <p class="room-name">객실명객실명</p>
+                                                        <p class="option">옵션명옵션명</p>
+                                                    </div>
+                                                    <div class="info">
+                                                        <p class="night">아고다</p>
+                                                        <p class="price">86,395원</p>
+                                                    </div>
+                                                </div>
+                                            </li>
+                                            <li class="cboth">
+                                                <div class="left fl">
+                                                    <div class="check-wrap">
+                                                        <input type="radio" id="hotel-select-04-03" style="display: none;" name="hotel-select-04">
+                                                        <label for="hotel-select-04-03" class="fl"></label>
+                                                    </div>
+                                                </div>
+                                                <div class="right fl">
+                                                    <div class="text">
+                                                        <p class="room-name">객실명객실명</p>
+                                                        <p class="option">옵션명옵션명</p>
+                                                    </div>
+                                                    <div class="info">
+                                                        <p class="night">아고다</p>
+                                                        <p class="price">86,395원</p>
+                                                    </div>
+                                                </div>
+                                            </li>
+                                            <li class="cboth">
+                                                <div class="left fl">
+                                                    <div class="check-wrap">
+                                                        <input type="radio" id="hotel-select-04-04" style="display: none;" name="hotel-select-04">
+                                                        <label for="hotel-select-04-04" class="fl"></label>
+                                                    </div>
+                                                </div>
+                                                <div class="right fl">
+                                                    <div class="text">
+                                                        <p class="room-name">객실명객실명</p>
+                                                        <p class="option">옵션명옵션명</p>
+                                                    </div>
+                                                    <div class="info">
+                                                        <p class="night">아고다</p>
+                                                        <p class="price">86,395원</p>
+                                                    </div>
+                                                </div>
+                                            </li>
+                                            <li class="cboth">
+                                                <div class="left fl">
+                                                    <div class="check-wrap">
+                                                        <input type="radio" id="hotel-select-04-05" style="display: none;" name="hotel-select-04">
+                                                        <label for="hotel-select-04-05" class="fl"></label>
+                                                    </div>
+                                                </div>
+                                                <div class="right fl">
+                                                    <div class="text">
+                                                        <p class="room-name">객실명객실명</p>
+                                                        <p class="option">옵션명옵션명</p>
+                                                    </div>
+                                                    <div class="info">
+                                                        <p class="night">아고다</p>
+                                                        <p class="price">86,395원</p>
+                                                    </div>
+                                                </div>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                    <div class="more-btn">
+                                        더보기 +
+                                    </div>
+                                </div>
+                            </li>
+                            <li class="plan-li">
+                                <div class="container">
+                                    <div class="top-box">
+                                        <div class="top">
+                                            <a href="" class="hotel-name">
+                                                롯데호텔 서울
+                                            </a>
+                                        </div>
+                                        <div class="btm cboth">
+                                            <div class="sub-text fl">
+                                                슈페이러트윈룸
+                                            </div>
+                                            <a href="#change" class="fl hotel-change-action">
+                                                객실변경
+                                            </a>
+                                        </div>
+                                        <div class="include-text">
+                                            조식포함, 석식포함
+                                        </div>
+                                    </div>
+                                    <a href="" class="btm-box">
+                                        <div class="date">
+                                            11.01.목 - 11.03.토
+                                        </div>
+                                        <div class="wrap">
+                                            <div class="night">
+                                                2박 아고다
+                                            </div>
+                                            <div class="price">
+                                                86,395원
+                                            </div>
+                                        </div>
+                                    </a>
+                                </div>
+                                <div class="hotel-change-pop">
+                                    <div class="top cboth">
+                                        <img src="./images/icon_roomchoice_i.png" alt="" class="fl">
+                                        <div class="text fl">
+                                            변경을 원하는 객실을 선택하세요.
+                                        </div>
+                                    </div>
+                                    <div class="contents">
+                                        <ul>
+                                            <li class="cboth">
+                                                <div class="left fl">
+                                                    <div class="check-wrap">
+                                                        <input type="radio" id="hotel-select-05-01" style="display: none;" name="hotel-select-05">
+                                                        <label for="hotel-select-05-01" class="fl"></label>
+                                                    </div>
+                                                </div>
+                                                <div class="right fl">
+                                                    <div class="text">
+                                                        <p class="room-name">객실명객실명</p>
+                                                        <p class="option">옵션명옵션명</p>
+                                                    </div>
+                                                    <div class="info">
+                                                        <p class="night">아고다</p>
+                                                        <p class="price">86,395원</p>
+                                                    </div>
+                                                </div>
+                                            </li>
+                                            <li class="cboth">
+                                                <div class="left fl">
+                                                    <div class="check-wrap">
+                                                        <input type="radio" id="hotel-select-05-02" style="display: none;" name="hotel-select-05">
+                                                        <label for="hotel-select-05-02" class="fl"></label>
+                                                    </div>
+                                                </div>
+                                                <div class="right fl">
+                                                    <div class="text">
+                                                        <p class="room-name">객실명객실명</p>
+                                                        <p class="option">옵션명옵션명</p>
+                                                    </div>
+                                                    <div class="info">
+                                                        <p class="night">아고다</p>
+                                                        <p class="price">86,395원</p>
+                                                    </div>
+                                                </div>
+                                            </li>
+                                            <li class="cboth">
+                                                <div class="left fl">
+                                                    <div class="check-wrap">
+                                                        <input type="radio" id="hotel-select-05-03" style="display: none;" name="hotel-select-05">
+                                                        <label for="hotel-select-05-03" class="fl"></label>
+                                                    </div>
+                                                </div>
+                                                <div class="right fl">
+                                                    <div class="text">
+                                                        <p class="room-name">객실명객실명</p>
+                                                        <p class="option">옵션명옵션명</p>
+                                                    </div>
+                                                    <div class="info">
+                                                        <p class="night">아고다</p>
+                                                        <p class="price">86,395원</p>
+                                                    </div>
+                                                </div>
+                                            </li>
+                                            <li class="cboth">
+                                                <div class="left fl">
+                                                    <div class="check-wrap">
+                                                        <input type="radio" id="hotel-select-05-04" style="display: none;" name="hotel-select-05">
+                                                        <label for="hotel-select-05-04" class="fl"></label>
+                                                    </div>
+                                                </div>
+                                                <div class="right fl">
+                                                    <div class="text">
+                                                        <p class="room-name">객실명객실명</p>
+                                                        <p class="option">옵션명옵션명</p>
+                                                    </div>
+                                                    <div class="info">
+                                                        <p class="night">아고다</p>
+                                                        <p class="price">86,395원</p>
+                                                    </div>
+                                                </div>
+                                            </li>
+                                            <li class="cboth">
+                                                <div class="left fl">
+                                                    <div class="check-wrap">
+                                                        <input type="radio" id="hotel-select-05-05" style="display: none;" name="hotel-select-05">
+                                                        <label for="hotel-select-05-05" class="fl"></label>
+                                                    </div>
+                                                </div>
+                                                <div class="right fl">
+                                                    <div class="text">
+                                                        <p class="room-name">객실명객실명</p>
+                                                        <p class="option">옵션명옵션명</p>
+                                                    </div>
+                                                    <div class="info">
+                                                        <p class="night">아고다</p>
+                                                        <p class="price">86,395원</p>
+                                                    </div>
+                                                </div>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                    <div class="more-btn">
+                                        더보기 +
+                                    </div>
+                                </div>
+                            </li>
+                            <li class="plan-li">
+                                <div class="container">
+                                    <div class="top-box">
+                                        <div class="top">
+                                            <a href="" class="hotel-name">
+                                                롯데 호텔 서울
+                                            </a>
+                                        </div>
+                                        <div class="btm cboth">
+                                            <div class="sub-text fl">
+                                                슈페이러트윈룸
+                                            </div>
+                                            <a href="#change" class="fl hotel-change-action">
+                                                객실변경
+                                            </a>
+                                        </div>
+                                        <div class="include-text">
+                                            조식포함, 석식포함
+                                        </div>
+                                    </div>
+                                    <a href="" class="btm-box">
+                                        <div class="date">
+                                            11.01.목 - 11.03.토
+                                        </div>
+                                        <div class="wrap">
+                                            <div class="night">
+                                                2박 아고다
+                                            </div>
+                                            <div class="price">
+                                                86,395원
+                                            </div>
+                                        </div>
+                                    </a>
+                                </div>
+                                <div class="hotel-change-pop">
+                                    <div class="top cboth">
+                                        <img src="./images/icon_roomchoice_i.png" alt="" class="fl">
+                                        <div class="text fl">
+                                            변경을 원하는 객실을 선택하세요.
+                                        </div>
+                                    </div>
+                                    <div class="contents">
+                                        <ul>
+                                            <li class="cboth">
+                                                <div class="left fl">
+                                                    <div class="check-wrap">
+                                                        <input type="radio" id="hotel-select-06-01" style="display: none;" name="hotel-select-06">
+                                                        <label for="hotel-select-06-01" class="fl"></label>
+                                                    </div>
+                                                </div>
+                                                <div class="right fl">
+                                                    <div class="text">
+                                                        <p class="room-name">객실명객실명</p>
+                                                        <p class="option">옵션명옵션명</p>
+                                                    </div>
+                                                    <div class="info">
+                                                        <p class="night">아고다</p>
+                                                        <p class="price">86,395원</p>
+                                                    </div>
+                                                </div>
+                                            </li>
+                                            <li class="cboth">
+                                                <div class="left fl">
+                                                    <div class="check-wrap">
+                                                        <input type="radio" id="hotel-select-06-02" style="display: none;" name="hotel-select-06">
+                                                        <label for="hotel-select-06-02" class="fl"></label>
+                                                    </div>
+                                                </div>
+                                                <div class="right fl">
+                                                    <div class="text">
+                                                        <p class="room-name">객실명객실명</p>
+                                                        <p class="option">옵션명옵션명</p>
+                                                    </div>
+                                                    <div class="info">
+                                                        <p class="night">아고다</p>
+                                                        <p class="price">86,395원</p>
+                                                    </div>
+                                                </div>
+                                            </li>
+                                            <li class="cboth">
+                                                <div class="left fl">
+                                                    <div class="check-wrap">
+                                                        <input type="radio" id="hotel-select-06-03" style="display: none;" name="hotel-select-06">
+                                                        <label for="hotel-select-06-03" class="fl"></label>
+                                                    </div>
+                                                </div>
+                                                <div class="right fl">
+                                                    <div class="text">
+                                                        <p class="room-name">객실명객실명</p>
+                                                        <p class="option">옵션명옵션명</p>
+                                                    </div>
+                                                    <div class="info">
+                                                        <p class="night">아고다</p>
+                                                        <p class="price">86,395원</p>
+                                                    </div>
+                                                </div>
+                                            </li>
+                                            <li class="cboth">
+                                                <div class="left fl">
+                                                    <div class="check-wrap">
+                                                        <input type="radio" id="hotel-select-06-04" style="display: none;" name="hotel-select-06">
+                                                        <label for="hotel-select-06-04" class="fl"></label>
+                                                    </div>
+                                                </div>
+                                                <div class="right fl">
+                                                    <div class="text">
+                                                        <p class="room-name">객실명객실명</p>
+                                                        <p class="option">옵션명옵션명</p>
+                                                    </div>
+                                                    <div class="info">
+                                                        <p class="night">아고다</p>
+                                                        <p class="price">86,395원</p>
+                                                    </div>
+                                                </div>
+                                            </li>
+                                            <li class="cboth">
+                                                <div class="left fl">
+                                                    <div class="check-wrap">
+                                                        <input type="radio" id="hotel-select-06-05" style="display: none;" name="hotel-select-06">
+                                                        <label for="hotel-select-06-05" class="fl"></label>
+                                                    </div>
+                                                </div>
+                                                <div class="right fl">
+                                                    <div class="text">
+                                                        <p class="room-name">객실명객실명</p>
+                                                        <p class="option">옵션명옵션명</p>
+                                                    </div>
+                                                    <div class="info">
+                                                        <p class="night">아고다</p>
+                                                        <p class="price">86,395원</p>
+                                                    </div>
+                                                </div>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                    <div class="more-btn">
+                                        더보기 +
+                                    </div>
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+                    <span class="share">
+                        <a href="#share">플랜 공유하기</a>
+                    </span>
+                </div>
+                <div class="contents">
+                    <div class="top-info">
+                        <div class="price">
+                            333,330원
+                        </div>
+                        <div class="night">
+                            <span>3개의 호텔</span>에서 <span>8박</span>
+                        </div>
+                    </div>
+                    <div class="list-wrap">
+                        <ul>
+                            <li class="plan-li">
+                                <div class="container">
+                                    <div class="top-box">
+                                        <div class="top">
+                                            <a href="" class="hotel-name">
+                                                라마다 서울라마다 서울라마다 서울라마다 서울
+                                            </a>
+                                        </div>
+                                        <div class="btm cboth">
+                                            <div class="sub-text fl">
+                                                슈페이러트윈룸
+                                            </div>
+                                            <a href="#change" class="fl hotel-change-action">
+                                                객실변경
+                                            </a>
+                                        </div>
+                                        <div class="include-text">
+                                            조식포함, 석식포함
+                                        </div>
+                                    </div>
+                                    <a href="" class="btm-box">
+                                        <div class="date">
+                                            11.01.목 - 11.03.토
+                                        </div>
+                                        <div class="wrap">
+                                            <div class="night">
+                                                2박 아고다
+                                            </div>
+                                            <div class="price">
+                                                86,395원
+                                            </div>
+                                        </div>
+                                    </a>
+                                </div>
+                                <div class="hotel-change-pop">
+                                    <div class="top cboth">
+                                        <img src="./images/icon_roomchoice_i.png" alt="" class="fl">
+                                        <div class="text fl">
+                                            변경을 원하는 객실을 선택하세요.
+                                        </div>
+                                    </div>
+                                    <div class="contents">
+                                        <ul>
+                                            <li class="cboth">
+                                                <div class="left fl">
+                                                    <div class="check-wrap">
+                                                        <input type="radio" id="hotel-select-07-01" style="display: none;" name="hotel-select-07">
+                                                        <label for="hotel-select-07-01" class="fl"></label>
+                                                    </div>
+                                                </div>
+                                                <div class="right fl">
+                                                    <div class="text">
+                                                        <p class="room-name">객실명객실명</p>
+                                                        <p class="option">옵션명옵션명</p>
+                                                    </div>
+                                                    <div class="info">
+                                                        <p class="night">아고다</p>
+                                                        <p class="price">86,395원</p>
+                                                    </div>
+                                                </div>
+                                            </li>
+                                            <li class="cboth">
+                                                <div class="left fl">
+                                                    <div class="check-wrap">
+                                                        <input type="radio" id="hotel-select-07-02" style="display: none;" name="hotel-select-07">
+                                                        <label for="hotel-select-07-02" class="fl"></label>
+                                                    </div>
+                                                </div>
+                                                <div class="right fl">
+                                                    <div class="text">
+                                                        <p class="room-name">객실명객실명</p>
+                                                        <p class="option">옵션명옵션명</p>
+                                                    </div>
+                                                    <div class="info">
+                                                        <p class="night">아고다</p>
+                                                        <p class="price">86,395원</p>
+                                                    </div>
+                                                </div>
+                                            </li>
+                                            <li class="cboth">
+                                                <div class="left fl">
+                                                    <div class="check-wrap">
+                                                        <input type="radio" id="hotel-select-07-03" style="display: none;" name="hotel-select-07">
+                                                        <label for="hotel-select-07-03" class="fl"></label>
+                                                    </div>
+                                                </div>
+                                                <div class="right fl">
+                                                    <div class="text">
+                                                        <p class="room-name">객실명객실명</p>
+                                                        <p class="option">옵션명옵션명</p>
+                                                    </div>
+                                                    <div class="info">
+                                                        <p class="night">아고다</p>
+                                                        <p class="price">86,395원</p>
+                                                    </div>
+                                                </div>
+                                            </li>
+                                            <li class="cboth">
+                                                <div class="left fl">
+                                                    <div class="check-wrap">
+                                                        <input type="radio" id="hotel-select-07-04" style="display: none;" name="hotel-select-07">
+                                                        <label for="hotel-select-07-04" class="fl"></label>
+                                                    </div>
+                                                </div>
+                                                <div class="right fl">
+                                                    <div class="text">
+                                                        <p class="room-name">객실명객실명</p>
+                                                        <p class="option">옵션명옵션명</p>
+                                                    </div>
+                                                    <div class="info">
+                                                        <p class="night">아고다</p>
+                                                        <p class="price">86,395원</p>
+                                                    </div>
+                                                </div>
+                                            </li>
+                                            <li class="cboth">
+                                                <div class="left fl">
+                                                    <div class="check-wrap">
+                                                        <input type="radio" id="hotel-select-07-05" style="display: none;" name="hotel-select-07">
+                                                        <label for="hotel-select-07-05" class="fl"></label>
+                                                    </div>
+                                                </div>
+                                                <div class="right fl">
+                                                    <div class="text">
+                                                        <p class="room-name">객실명객실명</p>
+                                                        <p class="option">옵션명옵션명</p>
+                                                    </div>
+                                                    <div class="info">
+                                                        <p class="night">아고다</p>
+                                                        <p class="price">86,395원</p>
+                                                    </div>
+                                                </div>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                    <div class="more-btn">
+                                        더보기 +
+                                    </div>
+                                </div>
+                            </li>
+                            <li class="plan-li">
+                                <div class="container">
+                                    <div class="top-box">
+                                        <div class="top">
+                                            <a href="" class="hotel-name">
+                                                롯데호텔 서울
+                                            </a>
+                                        </div>
+                                        <div class="btm cboth">
+                                            <div class="sub-text fl">
+                                                슈페이러트윈룸
+                                            </div>
+                                            <a href="#change" class="fl hotel-change-action">
+                                                객실변경
+                                            </a>
+                                        </div>
+                                        <div class="include-text">
+                                            조식포함, 석식포함
+                                        </div>
+                                    </div>
+                                    <a href="" class="btm-box">
+                                        <div class="date">
+                                            11.01.목 - 11.03.토
+                                        </div>
+                                        <div class="wrap">
+                                            <div class="night">
+                                                2박 아고다
+                                            </div>
+                                            <div class="price">
+                                                86,395원
+                                            </div>
+                                        </div>
+                                    </a>
+                                </div>
+                                <div class="hotel-change-pop">
+                                    <div class="top cboth">
+                                        <img src="./images/icon_roomchoice_i.png" alt="" class="fl">
+                                        <div class="text fl">
+                                            변경을 원하는 객실을 선택하세요.
+                                        </div>
+                                    </div>
+                                    <div class="contents">
+                                        <ul>
+                                            <li class="cboth">
+                                                <div class="left fl">
+                                                    <div class="check-wrap">
+                                                        <input type="radio" id="hotel-select-08-01" style="display: none;" name="hotel-select-08">
+                                                        <label for="hotel-select-08-01" class="fl"></label>
+                                                    </div>
+                                                </div>
+                                                <div class="right fl">
+                                                    <div class="text">
+                                                        <p class="room-name">객실명객실명</p>
+                                                        <p class="option">옵션명옵션명</p>
+                                                    </div>
+                                                    <div class="info">
+                                                        <p class="night">아고다</p>
+                                                        <p class="price">86,395원</p>
+                                                    </div>
+                                                </div>
+                                            </li>
+                                            <li class="cboth">
+                                                <div class="left fl">
+                                                    <div class="check-wrap">
+                                                        <input type="radio" id="hotel-select-08-02" style="display: none;" name="hotel-select-08">
+                                                        <label for="hotel-select-08-02" class="fl"></label>
+                                                    </div>
+                                                </div>
+                                                <div class="right fl">
+                                                    <div class="text">
+                                                        <p class="room-name">객실명객실명</p>
+                                                        <p class="option">옵션명옵션명</p>
+                                                    </div>
+                                                    <div class="info">
+                                                        <p class="night">아고다</p>
+                                                        <p class="price">86,395원</p>
+                                                    </div>
+                                                </div>
+                                            </li>
+                                            <li class="cboth">
+                                                <div class="left fl">
+                                                    <div class="check-wrap">
+                                                        <input type="radio" id="hotel-select-08-03" style="display: none;" name="hotel-select-08">
+                                                        <label for="hotel-select-08-03" class="fl"></label>
+                                                    </div>
+                                                </div>
+                                                <div class="right fl">
+                                                    <div class="text">
+                                                        <p class="room-name">객실명객실명</p>
+                                                        <p class="option">옵션명옵션명</p>
+                                                    </div>
+                                                    <div class="info">
+                                                        <p class="night">아고다</p>
+                                                        <p class="price">86,395원</p>
+                                                    </div>
+                                                </div>
+                                            </li>
+                                            <li class="cboth">
+                                                <div class="left fl">
+                                                    <div class="check-wrap">
+                                                        <input type="radio" id="hotel-select-08-04" style="display: none;" name="hotel-select-08">
+                                                        <label for="hotel-select-08-04" class="fl"></label>
+                                                    </div>
+                                                </div>
+                                                <div class="right fl">
+                                                    <div class="text">
+                                                        <p class="room-name">객실명객실명</p>
+                                                        <p class="option">옵션명옵션명</p>
+                                                    </div>
+                                                    <div class="info">
+                                                        <p class="night">아고다</p>
+                                                        <p class="price">86,395원</p>
+                                                    </div>
+                                                </div>
+                                            </li>
+                                            <li class="cboth">
+                                                <div class="left fl">
+                                                    <div class="check-wrap">
+                                                        <input type="radio" id="hotel-select-08-05" style="display: none;" name="hotel-select-08">
+                                                        <label for="hotel-select-08-05" class="fl"></label>
+                                                    </div>
+                                                </div>
+                                                <div class="right fl">
+                                                    <div class="text">
+                                                        <p class="room-name">객실명객실명</p>
+                                                        <p class="option">옵션명옵션명</p>
+                                                    </div>
+                                                    <div class="info">
+                                                        <p class="night">아고다</p>
+                                                        <p class="price">86,395원</p>
+                                                    </div>
+                                                </div>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                    <div class="more-btn">
+                                        더보기 +
+                                    </div>
+                                </div>
+                            </li>
+                            <li class="plan-li">
+                                <div class="container">
+                                    <div class="top-box">
+                                        <div class="top">
+                                            <a href="" class="hotel-name">
+                                                롯데 호텔 서울
+                                            </a>
+                                        </div>
+                                        <div class="btm cboth">
+                                            <div class="sub-text fl">
+                                                슈페이러트윈룸
+                                            </div>
+                                            <a href="#change" class="fl hotel-change-action">
+                                                객실변경
+                                            </a>
+                                        </div>
+                                        <div class="include-text">
+                                            조식포함, 석식포함
+                                        </div>
+                                    </div>
+                                    <a href="" class="btm-box">
+                                        <div class="date">
+                                            11.01.목 - 11.03.토
+                                        </div>
+                                        <div class="wrap">
+                                            <div class="night">
+                                                2박 아고다
+                                            </div>
+                                            <div class="price">
+                                                86,395원
+                                            </div>
+                                        </div>
+                                    </a>
+                                </div>
+                                <div class="hotel-change-pop">
+                                    <div class="top cboth">
+                                        <img src="./images/icon_roomchoice_i.png" alt="" class="fl">
+                                        <div class="text fl">
+                                            변경을 원하는 객실을 선택하세요.
+                                        </div>
+                                    </div>
+                                    <div class="contents">
+                                        <ul>
+                                            <li class="cboth">
+                                                <div class="left fl">
+                                                    <div class="check-wrap">
+                                                        <input type="radio" id="hotel-select-09-01" style="display: none;" name="hotel-select-09">
+                                                        <label for="hotel-select-09-01" class="fl"></label>
+                                                    </div>
+                                                </div>
+                                                <div class="right fl">
+                                                    <div class="text">
+                                                        <p class="room-name">객실명객실명</p>
+                                                        <p class="option">옵션명옵션명</p>
+                                                    </div>
+                                                    <div class="info">
+                                                        <p class="night">아고다</p>
+                                                        <p class="price">86,395원</p>
+                                                    </div>
+                                                </div>
+                                            </li>
+                                            <li class="cboth">
+                                                <div class="left fl">
+                                                    <div class="check-wrap">
+                                                        <input type="radio" id="hotel-select-09-02" style="display: none;" name="hotel-select-09">
+                                                        <label for="hotel-select-09-02" class="fl"></label>
+                                                    </div>
+                                                </div>
+                                                <div class="right fl">
+                                                    <div class="text">
+                                                        <p class="room-name">객실명객실명</p>
+                                                        <p class="option">옵션명옵션명</p>
+                                                    </div>
+                                                    <div class="info">
+                                                        <p class="night">아고다</p>
+                                                        <p class="price">86,395원</p>
+                                                    </div>
+                                                </div>
+                                            </li>
+                                            <li class="cboth">
+                                                <div class="left fl">
+                                                    <div class="check-wrap">
+                                                        <input type="radio" id="hotel-select-09-03" style="display: none;" name="hotel-select-09">
+                                                        <label for="hotel-select-09-03" class="fl"></label>
+                                                    </div>
+                                                </div>
+                                                <div class="right fl">
+                                                    <div class="text">
+                                                        <p class="room-name">객실명객실명</p>
+                                                        <p class="option">옵션명옵션명</p>
+                                                    </div>
+                                                    <div class="info">
+                                                        <p class="night">아고다</p>
+                                                        <p class="price">86,395원</p>
+                                                    </div>
+                                                </div>
+                                            </li>
+                                            <li class="cboth">
+                                                <div class="left fl">
+                                                    <div class="check-wrap">
+                                                        <input type="radio" id="hotel-select-09-04" style="display: none;" name="hotel-select-09">
+                                                        <label for="hotel-select-09-04" class="fl"></label>
+                                                    </div>
+                                                </div>
+                                                <div class="right fl">
+                                                    <div class="text">
+                                                        <p class="room-name">객실명객실명</p>
+                                                        <p class="option">옵션명옵션명</p>
+                                                    </div>
+                                                    <div class="info">
+                                                        <p class="night">아고다</p>
+                                                        <p class="price">86,395원</p>
+                                                    </div>
+                                                </div>
+                                            </li>
+                                            <li class="cboth">
+                                                <div class="left fl">
+                                                    <div class="check-wrap">
+                                                        <input type="radio" id="hotel-select-09-05" style="display: none;" name="hotel-select-09">
+                                                        <label for="hotel-select-09-05" class="fl"></label>
+                                                    </div>
+                                                </div>
+                                                <div class="right fl">
+                                                    <div class="text">
+                                                        <p class="room-name">객실명객실명</p>
+                                                        <p class="option">옵션명옵션명</p>
+                                                    </div>
+                                                    <div class="info">
+                                                        <p class="night">아고다</p>
+                                                        <p class="price">86,395원</p>
+                                                    </div>
+                                                </div>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                    <div class="more-btn">
+                                        더보기 +
+                                    </div>
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+                    <span class="share">
+                        <a href="#share">플랜 공유하기</a>
+                    </span>
+                </div>
+                <div class="contents">
+                    <div class="top-info">
+                        <div class="price">
+                            333,330원
+                        </div>
+                        <div class="night">
+                            <span>3개의 호텔</span>에서 <span>8박</span>
+                        </div>
+                    </div>
+                    <div class="list-wrap">
+                        <ul>
+                            <li class="plan-li">
+                                <div class="container">
+                                    <div class="top-box">
+                                        <div class="top">
+                                            <a href="" class="hotel-name">
+                                                라마다 서울라마다 서울라마다 서울라마다 서울
+                                            </a>
+                                        </div>
+                                        <div class="btm cboth">
+                                            <div class="sub-text fl">
+                                                슈페이러트윈룸
+                                            </div>
+                                            <a href="#change" class="fl hotel-change-action">
+                                                객실변경
+                                            </a>
+                                        </div>
+                                        <div class="include-text">
+                                            조식포함, 석식포함
+                                        </div>
+                                    </div>
+                                    <a href="" class="btm-box">
+                                        <div class="date">
+                                            11.01.목 - 11.03.토
+                                        </div>
+                                        <div class="wrap">
+                                            <div class="night">
+                                                2박 아고다
+                                            </div>
+                                            <div class="price">
+                                                86,395원
+                                            </div>
+                                        </div>
+                                    </a>
+                                </div>
+                                <div class="hotel-change-pop">
+                                    <div class="top cboth">
+                                        <img src="./images/icon_roomchoice_i.png" alt="" class="fl">
+                                        <div class="text fl">
+                                            변경을 원하는 객실을 선택하세요.
+                                        </div>
+                                    </div>
+                                    <div class="contents">
+                                        <ul>
+                                            <li class="cboth">
+                                                <div class="left fl">
+                                                    <div class="check-wrap">
+                                                        <input type="radio" id="hotel-select-10-01" style="display: none;" name="hotel-select-10">
+                                                        <label for="hotel-select-10-01" class="fl"></label>
+                                                    </div>
+                                                </div>
+                                                <div class="right fl">
+                                                    <div class="text">
+                                                        <p class="room-name">객실명객실명</p>
+                                                        <p class="option">옵션명옵션명</p>
+                                                    </div>
+                                                    <div class="info">
+                                                        <p class="night">아고다</p>
+                                                        <p class="price">86,395원</p>
+                                                    </div>
+                                                </div>
+                                            </li>
+                                            <li class="cboth">
+                                                <div class="left fl">
+                                                    <div class="check-wrap">
+                                                        <input type="radio" id="hotel-select-10-02" style="display: none;" name="hotel-select-10">
+                                                        <label for="hotel-select-10-02" class="fl"></label>
+                                                    </div>
+                                                </div>
+                                                <div class="right fl">
+                                                    <div class="text">
+                                                        <p class="room-name">객실명객실명</p>
+                                                        <p class="option">옵션명옵션명</p>
+                                                    </div>
+                                                    <div class="info">
+                                                        <p class="night">아고다</p>
+                                                        <p class="price">86,395원</p>
+                                                    </div>
+                                                </div>
+                                            </li>
+                                            <li class="cboth">
+                                                <div class="left fl">
+                                                    <div class="check-wrap">
+                                                        <input type="radio" id="hotel-select-10-03" style="display: none;" name="hotel-select-10">
+                                                        <label for="hotel-select-10-03" class="fl"></label>
+                                                    </div>
+                                                </div>
+                                                <div class="right fl">
+                                                    <div class="text">
+                                                        <p class="room-name">객실명객실명</p>
+                                                        <p class="option">옵션명옵션명</p>
+                                                    </div>
+                                                    <div class="info">
+                                                        <p class="night">아고다</p>
+                                                        <p class="price">86,395원</p>
+                                                    </div>
+                                                </div>
+                                            </li>
+                                            <li class="cboth">
+                                                <div class="left fl">
+                                                    <div class="check-wrap">
+                                                        <input type="radio" id="hotel-select-10-04" style="display: none;" name="hotel-select-10">
+                                                        <label for="hotel-select-10-04" class="fl"></label>
+                                                    </div>
+                                                </div>
+                                                <div class="right fl">
+                                                    <div class="text">
+                                                        <p class="room-name">객실명객실명</p>
+                                                        <p class="option">옵션명옵션명</p>
+                                                    </div>
+                                                    <div class="info">
+                                                        <p class="night">아고다</p>
+                                                        <p class="price">86,395원</p>
+                                                    </div>
+                                                </div>
+                                            </li>
+                                            <li class="cboth">
+                                                <div class="left fl">
+                                                    <div class="check-wrap">
+                                                        <input type="radio" id="hotel-select-10-05" style="display: none;" name="hotel-select-10">
+                                                        <label for="hotel-select-10-05" class="fl"></label>
+                                                    </div>
+                                                </div>
+                                                <div class="right fl">
+                                                    <div class="text">
+                                                        <p class="room-name">객실명객실명</p>
+                                                        <p class="option">옵션명옵션명</p>
+                                                    </div>
+                                                    <div class="info">
+                                                        <p class="night">아고다</p>
+                                                        <p class="price">86,395원</p>
+                                                    </div>
+                                                </div>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                    <div class="more-btn">
+                                        더보기 +
+                                    </div>
+                                </div>
+                            </li>
+                            <li class="plan-li">
+                                <div class="container">
+                                    <div class="top-box">
+                                        <div class="top">
+                                            <a href="" class="hotel-name">
+                                                롯데호텔 서울
+                                            </a>
+                                        </div>
+                                        <div class="btm cboth">
+                                            <div class="sub-text fl">
+                                                슈페이러트윈룸
+                                            </div>
+                                            <a href="#change" class="fl hotel-change-action">
+                                                객실변경
+                                            </a>
+                                        </div>
+                                        <div class="include-text">
+                                            조식포함, 석식포함
+                                        </div>
+                                    </div>
+                                    <a href="" class="btm-box">
+                                        <div class="date">
+                                            11.01.목 - 11.03.토
+                                        </div>
+                                        <div class="wrap">
+                                            <div class="night">
+                                                2박 아고다
+                                            </div>
+                                            <div class="price">
+                                                86,395원
+                                            </div>
+                                        </div>
+                                    </a>
+                                </div>
+                                <div class="hotel-change-pop">
+                                    <div class="top cboth">
+                                        <img src="./images/icon_roomchoice_i.png" alt="" class="fl">
+                                        <div class="text fl">
+                                            변경을 원하는 객실을 선택하세요.
+                                        </div>
+                                    </div>
+                                    <div class="contents">
+                                        <ul>
+                                            <li class="cboth">
+                                                <div class="left fl">
+                                                    <div class="check-wrap">
+                                                        <input type="radio" id="hotel-select-11-01" style="display: none;" name="hotel-select-11">
+                                                        <label for="hotel-select-11-01" class="fl"></label>
+                                                    </div>
+                                                </div>
+                                                <div class="right fl">
+                                                    <div class="text">
+                                                        <p class="room-name">객실명객실명</p>
+                                                        <p class="option">옵션명옵션명</p>
+                                                    </div>
+                                                    <div class="info">
+                                                        <p class="night">아고다</p>
+                                                        <p class="price">86,395원</p>
+                                                    </div>
+                                                </div>
+                                            </li>
+                                            <li class="cboth">
+                                                <div class="left fl">
+                                                    <div class="check-wrap">
+                                                        <input type="radio" id="hotel-select-11-02" style="display: none;" name="hotel-select-11">
+                                                        <label for="hotel-select-11-02" class="fl"></label>
+                                                    </div>
+                                                </div>
+                                                <div class="right fl">
+                                                    <div class="text">
+                                                        <p class="room-name">객실명객실명</p>
+                                                        <p class="option">옵션명옵션명</p>
+                                                    </div>
+                                                    <div class="info">
+                                                        <p class="night">아고다</p>
+                                                        <p class="price">86,395원</p>
+                                                    </div>
+                                                </div>
+                                            </li>
+                                            <li class="cboth">
+                                                <div class="left fl">
+                                                    <div class="check-wrap">
+                                                        <input type="radio" id="hotel-select-11-03" style="display: none;" name="hotel-select-11">
+                                                        <label for="hotel-select-11-03" class="fl"></label>
+                                                    </div>
+                                                </div>
+                                                <div class="right fl">
+                                                    <div class="text">
+                                                        <p class="room-name">객실명객실명</p>
+                                                        <p class="option">옵션명옵션명</p>
+                                                    </div>
+                                                    <div class="info">
+                                                        <p class="night">아고다</p>
+                                                        <p class="price">86,395원</p>
+                                                    </div>
+                                                </div>
+                                            </li>
+                                            <li class="cboth">
+                                                <div class="left fl">
+                                                    <div class="check-wrap">
+                                                        <input type="radio" id="hotel-select-11-04" style="display: none;" name="hotel-select-11">
+                                                        <label for="hotel-select-11-04" class="fl"></label>
+                                                    </div>
+                                                </div>
+                                                <div class="right fl">
+                                                    <div class="text">
+                                                        <p class="room-name">객실명객실명</p>
+                                                        <p class="option">옵션명옵션명</p>
+                                                    </div>
+                                                    <div class="info">
+                                                        <p class="night">아고다</p>
+                                                        <p class="price">86,395원</p>
+                                                    </div>
+                                                </div>
+                                            </li>
+                                            <li class="cboth">
+                                                <div class="left fl">
+                                                    <div class="check-wrap">
+                                                        <input type="radio" id="hotel-select-11-05" style="display: none;" name="hotel-select-11">
+                                                        <label for="hotel-select-11-05" class="fl"></label>
+                                                    </div>
+                                                </div>
+                                                <div class="right fl">
+                                                    <div class="text">
+                                                        <p class="room-name">객실명객실명</p>
+                                                        <p class="option">옵션명옵션명</p>
+                                                    </div>
+                                                    <div class="info">
+                                                        <p class="night">아고다</p>
+                                                        <p class="price">86,395원</p>
+                                                    </div>
+                                                </div>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                    <div class="more-btn">
+                                        더보기 +
+                                    </div>
+                                </div>
+                            </li>
+                            <li class="plan-li">
+                                <div class="container">
+                                    <div class="top-box">
+                                        <div class="top">
+                                            <a href="" class="hotel-name">
+                                                롯데 호텔 서울
+                                            </a>
+                                        </div>
+                                        <div class="btm cboth">
+                                            <div class="sub-text fl">
+                                                슈페이러트윈룸
+                                            </div>
+                                            <a href="#change" class="fl hotel-change-action">
+                                                객실변경
+                                            </a>
+                                        </div>
+                                        <div class="include-text">
+                                            조식포함, 석식포함
+                                        </div>
+                                    </div>
+                                    <a href="" class="btm-box">
+                                        <div class="date">
+                                            11.01.목 - 11.03.토
+                                        </div>
+                                        <div class="wrap">
+                                            <div class="night">
+                                                2박 아고다
+                                            </div>
+                                            <div class="price">
+                                                86,395원
+                                            </div>
+                                        </div>
+                                    </a>
+                                </div>
+                                <div class="hotel-change-pop">
+                                    <div class="top cboth">
+                                        <img src="./images/icon_roomchoice_i.png" alt="" class="fl">
+                                        <div class="text fl">
+                                            변경을 원하는 객실을 선택하세요.
+                                        </div>
+                                    </div>
+                                    <div class="contents">
+                                        <ul>
+                                            <li class="cboth">
+                                                <div class="left fl">
+                                                    <div class="check-wrap">
+                                                        <input type="radio" id="hotel-select-12-01" style="display: none;" name="hotel-select-12">
+                                                        <label for="hotel-select-12-01" class="fl"></label>
+                                                    </div>
+                                                </div>
+                                                <div class="right fl">
+                                                    <div class="text">
+                                                        <p class="room-name">객실명객실명</p>
+                                                        <p class="option">옵션명옵션명</p>
+                                                    </div>
+                                                    <div class="info">
+                                                        <p class="night">아고다</p>
+                                                        <p class="price">86,395원</p>
+                                                    </div>
+                                                </div>
+                                            </li>
+                                            <li class="cboth">
+                                                <div class="left fl">
+                                                    <div class="check-wrap">
+                                                        <input type="radio" id="hotel-select-12-02" style="display: none;" name="hotel-select-12">
+                                                        <label for="hotel-select-12-02" class="fl"></label>
+                                                    </div>
+                                                </div>
+                                                <div class="right fl">
+                                                    <div class="text">
+                                                        <p class="room-name">객실명객실명</p>
+                                                        <p class="option">옵션명옵션명</p>
+                                                    </div>
+                                                    <div class="info">
+                                                        <p class="night">아고다</p>
+                                                        <p class="price">86,395원</p>
+                                                    </div>
+                                                </div>
+                                            </li>
+                                            <li class="cboth">
+                                                <div class="left fl">
+                                                    <div class="check-wrap">
+                                                        <input type="radio" id="hotel-select-12-03" style="display: none;" name="hotel-select-12">
+                                                        <label for="hotel-select-12-03" class="fl"></label>
+                                                    </div>
+                                                </div>
+                                                <div class="right fl">
+                                                    <div class="text">
+                                                        <p class="room-name">객실명객실명</p>
+                                                        <p class="option">옵션명옵션명</p>
+                                                    </div>
+                                                    <div class="info">
+                                                        <p class="night">아고다</p>
+                                                        <p class="price">86,395원</p>
+                                                    </div>
+                                                </div>
+                                            </li>
+                                            <li class="cboth">
+                                                <div class="left fl">
+                                                    <div class="check-wrap">
+                                                        <input type="radio" id="hotel-select-12-04" style="display: none;" name="hotel-select-12">
+                                                        <label for="hotel-select-12-04" class="fl"></label>
+                                                    </div>
+                                                </div>
+                                                <div class="right fl">
+                                                    <div class="text">
+                                                        <p class="room-name">객실명객실명</p>
+                                                        <p class="option">옵션명옵션명</p>
+                                                    </div>
+                                                    <div class="info">
+                                                        <p class="night">아고다</p>
+                                                        <p class="price">86,395원</p>
+                                                    </div>
+                                                </div>
+                                            </li>
+                                            <li class="cboth">
+                                                <div class="left fl">
+                                                    <div class="check-wrap">
+                                                        <input type="radio" id="hotel-select-12-05" style="display: none;" name="hotel-select-12">
+                                                        <label for="hotel-select-12-05" class="fl"></label>
+                                                    </div>
+                                                </div>
+                                                <div class="right fl">
+                                                    <div class="text">
+                                                        <p class="room-name">객실명객실명</p>
+                                                        <p class="option">옵션명옵션명</p>
+                                                    </div>
+                                                    <div class="info">
+                                                        <p class="night">아고다</p>
+                                                        <p class="price">86,395원</p>
+                                                    </div>
+                                                </div>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                    <div class="more-btn">
+                                        더보기 +
+                                    </div>
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+                    <span class="share">
+                        <a href="#share">플랜 공유하기</a>
+                    </span>
+                </div>
+            </div>
+        </div>
+        <div class="search-history-wrap">
+            <div class="title">
+                최근 검색 기록
+            </div>
+            <div class="contents">
+                <div class="calc-swiper-container swiper-container-horizontal">
+                    <div class="swiper-wrapper">
+                        <div class="swiper-slide swiper-slide-active">
+                            <div class="top cboth">
+                                <div class="night fl">
+                                    <span>
+                                        30박
+                                    </span>
+                                </div>
+                                <div class="date fl">
+                                    2월 11일 ~ 2월 19일
+                                </div>
+                                <div class="price fr">
+                                    403,505원
+                                </div>
+                            </div>
+                            <div class="plan-wrap">
+                                <ul>
+                                    <li>
+                                        <a href="">
+                                            <div class="top cboth">
+                                                <p>
+                                                    <span class="type">
+                                                        플랜 1
+                                                    </span>
+                                                    <span class="hotel-name">노보리베츠 온센 다이-이치 타마토리</span> <span class="text">외 1개의 호텔</span>
+                                                </p>
+                                            </div>
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="">
+                                            <div class="top cboth">
+                                                <p>
+                                                    <span class="type">
+                                                        플랜 2
+                                                    </span>
+                                                    <span class="hotel-name">노보리베츠 온센 다이-이치 타마토리</span> <span class="text">외 1개의 호텔</span>
+                                                </p>
+                                            </div>
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="">
+                                            <div class="top cboth">
+                                                <p>
+                                                    <span class="type">
+                                                        플랜 3
+                                                    </span>
+                                                    <span class="hotel-name">노보리베츠 온센 다이-이치 타마토리</span> <span class="text">외 1개의 호텔</span>
+                                                </p>
+                                            </div>
+                                        </a>
+                                    </li>
+                                </ul>
+                            </div>
+                            <div class="btn-wrap cboth">
+                                <button class="delete fl">
+                                    삭제
+                                </button>
+                                <button class="re-search fr">
+                                    재검색
+                                </button>
+                            </div>
+                        </div>
+                        <div class="swiper-slide swiper-slide-active">
+                            <div class="top cboth">
+                                <div class="night fl">
+                                    <span>
+                                        30박
+                                    </span>
+                                </div>
+                                <div class="date fl">
+                                    2월 11일 ~ 2월 19일
+                                </div>
+                                <div class="price fr">
+                                    403,505원
+                                </div>
+                            </div>
+                            <div class="plan-wrap">
+                                <ul>
+                                    <li>
+                                        <a href="">
+                                            <div class="top cboth">
+                                                <p>
+                                                    <span class="type">
+                                                        플랜 1
+                                                    </span>
+                                                    <span class="hotel-name">노보리베츠 온센 다이-이치 타마토리</span> <span class="text">외 1개의 호텔</span>
+                                                </p>
+                                            </div>
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="">
+                                            <div class="top cboth">
+                                                <p>
+                                                    <span class="type">
+                                                        플랜 2
+                                                    </span>
+                                                    <span class="hotel-name">노보리베츠 온센 다이-이치 타마토리</span> <span class="text">외 1개의 호텔</span>
+                                                </p>
+                                            </div>
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="">
+                                            <div class="top cboth">
+                                                <p>
+                                                    <span class="type">
+                                                        플랜 3
+                                                    </span>
+                                                    <span class="hotel-name">노보리베츠 온센 다이-이치 타마토리</span> <span class="text">외 1개의 호텔</span>
+                                                </p>
+                                            </div>
+                                        </a>
+                                    </li>
+                                </ul>
+                            </div>
+                            <div class="btn-wrap cboth">
+                                <button class="delete fl">
+                                    삭제
+                                </button>
+                                <button class="re-search fr">
+                                    재검색
+                                </button>
+                            </div>
+                        </div>
+                        <div class="swiper-slide swiper-slide-active">
+                            <div class="top cboth">
+                                <div class="night fl">
+                                    <span>
+                                        30박
+                                    </span>
+                                </div>
+                                <div class="date fl">
+                                    2월 11일 ~ 2월 19일
+                                </div>
+                                <div class="price fr">
+                                    403,505원
+                                </div>
+                            </div>
+                            <div class="plan-wrap">
+                                <ul>
+                                    <li>
+                                        <a href="">
+                                            <div class="top cboth">
+                                                <p>
+                                                    <span class="type">
+                                                        플랜 1
+                                                    </span>
+                                                    <span class="hotel-name">노보리베츠 온센 다이-이치 타마토리</span> <span class="text">외 1개의 호텔</span>
+                                                </p>
+                                            </div>
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="">
+                                            <div class="top cboth">
+                                                <p>
+                                                    <span class="type">
+                                                        플랜 2
+                                                    </span>
+                                                    <span class="hotel-name">노보리베츠 온센 다이-이치 타마토리</span> <span class="text">외 1개의 호텔</span>
+                                                </p>
+                                            </div>
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="">
+                                            <div class="top cboth">
+                                                <p>
+                                                    <span class="type">
+                                                        플랜 3
+                                                    </span>
+                                                    <span class="hotel-name">노보리베츠 온센 다이-이치 타마토리</span> <span class="text">외 1개의 호텔</span>
+                                                </p>
+                                            </div>
+                                        </a>
+                                    </li>
+                                </ul>
+                            </div>
+                            <div class="btn-wrap cboth">
+                                <button class="delete fl">
+                                    삭제
+                                </button>
+                                <button class="re-search fr">
+                                    재검색
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="swiper-button-next"></div>
+                <div class="swiper-button-prev swiper-button-disabled"></div>
+            </div>
+        </div>
+    </div>
+    <div id="footer">
+        <div class="footer-wrap">
+            <div class="navi-wrap">
+                <ul>
+                    <li>
+                        <a href="">
+                            이용가이드
+                        </a>
+                    </li>
+                    <li>
+                        <a href="">
+                            이용약관
+                        </a>
+                    </li>
+                    <li>
+                        <a href="">
+                            개인정보보호정책
+                        </a>
+                    </li>
+                </ul>
+            </div>
+            <div class="info-wrap">
+                <p>
+                    주소: 서울시 중구 청계천로 8층<br>
+                    사업자등록번호: 217-81-38971<br>
+                    통신판매업신고번호: 2018-서울중구-1932
+                </p>
+                <p>
+                    Contact: biz@stayplan.me
+                </p>
+            </div>
+            <div class="sns-wrap">
+                <ul>
+                    <li>
+                        <a href="" class="blog">
+                            블로그
+                        </a>
+                    </li>
+                    <li>
+                        <a href="" class="insta">
+                            인스타그램
+                        </a>
+                    </li>
+                    <li>
+                        <a href="" class="face">
+                            페이스북
+                        </a>
+                    </li>
+                </ul>
+            </div>
+            <div class="right">
+                <p>
+                    Copyright ⓒ 2019 by stayplan.me All Rights Reserved.
+                </p>
+            </div>
+        </div>
+    </div>
+    <div class="main-calc-wrap">
+        <div class="main-calc-module">
+            <div class="close-btn">
+                <img src="./images/btn_header_close_white.png" alt="">
+            </div>
+            <div class="text">
+                재검색
+            </div>
+            <div class="contents" style="display: block;">
+                <div class="input-date">
+                    <span>여행 시작일</span>
+                    <input type="text" class="form-control" name="date" id="date" data-select="datepicker" autocomplete="off" readonly="readonly">
+                </div>
+                <div class="total_pp_number">
+                    <span>인원 수</span>
+                    <input type="text" readonly="readonly">
+                    <div class="total-people-select">
+                        <div class="container">
+                            <ul>
+                                <li class="people-type">
+                                    <div class="name">
+                                        성인
+                                    </div>
+                                    <div class="input-wrap">
+                                        <span class="input-number-decrement"></span><input class="input-number_01" type="numer" value="0명" min="0" max="100"><span class="input-number-increment"></span>
+                                    </div>
+                                </li>
+                                <li class="people-type">
+                                    <div class="name">
+                                        아동
+                                    </div>
+                                    <div class="input-wrap">
+                                        <span class="input-number-decrement"></span><input class="input-number_02" type="numer" value="0명" min="0" max="100"><span class="input-number-increment"></span>
+                                    </div>
+                                </li>
+                                <li class="people-age">
+                                    <div class="name">
+                                        아동1 나이
+                                    </div>
+                                    <div class="input-wrap">
+                                        <select name="" class="input-number-03">
+                                            <option value="1">1세</option>
+                                            <option value="2">2세</option>
+                                            <option value="3">3세</option>
+                                            <option value="4">4세</option>
+                                            <option value="5">5세</option>
+                                            <option value="6">6세</option>
+                                            <option value="7">7세</option>
+                                            <option value="8">8세</option>
+                                            <option value="9">9세</option>
+                                            <option value="10">10세</option>
+                                            <option value="11">11세</option>
+                                            <option value="12">12세</option>
+                                            <option value="13">13세</option>
+                                            <option value="14">14세</option>
+                                            <option value="15">15세</option>
+                                            <option value="16">16세</option>
+                                            <option value="17">17세</option>
+                                        </select>
+                                    </div>
+                                </li>
+                                <li class="people-age">
+                                    <div class="name">
+                                        아동2 나이
+                                    </div>
+                                    <div class="input-wrap">
+                                        <select name="" class="input-number-04">
+                                            <option value="1">1세</option>
+                                            <option value="2">2세</option>
+                                            <option value="3">3세</option>
+                                            <option value="4">4세</option>
+                                            <option value="5">5세</option>
+                                            <option value="6">6세</option>
+                                            <option value="7">7세</option>
+                                            <option value="8">8세</option>
+                                            <option value="9">9세</option>
+                                            <option value="10">10세</option>
+                                            <option value="11">11세</option>
+                                            <option value="12">12세</option>
+                                            <option value="13">13세</option>
+                                            <option value="14">14세</option>
+                                            <option value="15">15세</option>
+                                            <option value="16">16세</option>
+                                            <option value="17">17세</option>
+                                        </select>
+                                    </div>
+                                </li>
+                            </ul>
+                        </div>
+                        <div class="complete">
+                            완료
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="content-plan-list" style="display: block;">
+            <ul class="plan">
+                <div class="plan-title">
+                    플랜 1
+                </div>
+                <li class="on-li">
+                    <a href="" class="hotel-name">
+                        노보리베츠 온센 다이-이치
+                    </a>
+                    <div class="input-wrap cboth">
+                        <div class="number fl">
+                            <span class="input-number-decrement"></span><input class="night-number-day1-01" type="numer" value="0박" min="0" max="100"><span class="input-number-increment"></span>
+                        </div>
+                        <div class="del-btn fr">
+                            <button class="delete">
+                                삭제
+                            </button>
+                        </div>
+                    </div>
+                    <div class="change-btn">
+                        <img src="./images/icon_plan_switch.png" alt="">
+                    </div>
+                </li>
+                <li class="on-li">
+                    <a href="" class="hotel-name">
+                        노보리베츠 온센 다이-이치 타키모토칸 다이-이치 타키모토칸
+                    </a>
+                    <div class="input-wrap cboth">
+                        <div class="number fl">
+                            <span class="input-number-decrement"></span><input class="night-number-day1-02" type="numer" value="0박" min="0" max="100"><span class="input-number-increment"></span>
+                        </div>
+                        <div class="del-btn fr">
+                            <button class="delete">
+                                삭제
+                            </button>
+                        </div>
+                    </div>
+                    <div class="change-btn">
+                        <img src="./images/icon_plan_switch.png" alt="">
+                    </div>
+                </li>
+                <li class="add-li-rest">
+                    <a href="#search" class="search-btn-wrap cboth">
+                        <div class="icon fl">
+                            <img src="./images/icon_plan_addhotel.png" alt="">
+                        </div>
+                        <div class="text fl">
+                            <p>호텔을 추가하세요</p>
+                            <p>호텔 및 위시리스트 검색</p>
+                        </div>
+                    </a>
+                </li>
+            </ul>
+            <ul class="add-plan">
+                <div class="plan-title">
+                    플랜 2
+                </div>
+                <div class="close-btn">
+                    <img src="./../images/btn_plan_delete.png" alt="">
+                </div>
+                <div class="plan-contents">
+                    <li class="on-li">
+                        <a href="" class="hotel-name">
+                            노보리베츠 온센 다이-이치
+                        </a>
+                        <div class="input-wrap cboth">
+                            <div class="number fl">
+                                <span class="input-number-decrement"></span><input class="night-number-day1-01" type="numer" value="0박" min="0" max="100"><span class="input-number-increment"></span>
+                            </div>
+                            <div class="del-btn fr">
+                                <button class="delete">
+                                    삭제
+                                </button>
+                            </div>
+                        </div>
+                        <div class="change-btn">
+                            <img src="./images/icon_plan_switch.png" alt="">
+                        </div>
+                    </li>
+                    <li class="on-li">
+                        <a href="" class="hotel-name">
+                            노보리베츠 온센 다이-이치 타키모토칸 다이-이치 타키모토칸
+                        </a>
+                        <div class="input-wrap cboth">
+                            <div class="number fl">
+                                <span class="input-number-decrement"></span><input class="night-number-day1-02" type="numer" value="0박" min="0" max="100"><span class="input-number-increment"></span>
+                            </div>
+                            <div class="del-btn fr">
+                                <button class="delete">
+                                    삭제
+                                </button>
+                            </div>
+                        </div>
+                        <div class="change-btn">
+                            <img src="./images/icon_plan_switch.png" alt="">
+                        </div>
+                    </li>
+                    <li class="add-li-rest">
+                        <a href="#search" class="search-btn-wrap cboth">
+                            <div class="icon fl">
+                                <img src="./images/icon_plan_addhotel.png" alt="">
+                            </div>
+                            <div class="text fl">
+                                <p>호텔을 추가하세요</p>
+                                <p>호텔 및 위시리스트 검색</p>
+                            </div>
+                        </a>
+                    </li>
+                </div>
+            </ul>
+            <div class="plan-add-btn">
+                다른 플랜 추가 +
+            </div>
+            <div class="calc-btn-wrap">
+                <button>
+                    계산하기
+                </button>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>

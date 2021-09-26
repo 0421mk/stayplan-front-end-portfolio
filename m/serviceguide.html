@@ -1,0 +1,241 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.1//EN" "http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="ko">
+
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=0" />
+    <title>stayplan</title>
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
+    <link href="./../css/swiper.css" rel="stylesheet" type="text/css" />
+    <link href="./../css/default.css" rel="stylesheet" type="text/css" />
+    <link href="./css/datepicker.css" rel="stylesheet" type="text/css" />
+    <script type="text/javascript" src="./../js/swiper.js"></script>
+    <script type="text/javascript" src="./js/datepicker.js"></script>
+    <script type="text/javascript" src="./js/layout.js"></script>
+    <script type="text/javascript" src="./js/index.js"></script>
+    <!--mobile css-->
+    <link href="./css/layout.css" rel="stylesheet" type="text/css" />
+    <link href="./css/serviceguide.css" rel="stylesheet" type="text/css" />
+</head>
+
+<body>
+    <div id="header">
+        <div class="header-wrap cboth">
+            <div class="logo fl">
+                <img src="./images/header_logo.png" alt="">
+            </div>
+            <div class="menu fr">
+                <img src="./images/bt_menu.gif" alt="">
+            </div>
+        </div>
+        <div class="header-contents">
+            <div class="top cboth">
+                <div class="title fl cboth">
+                    <a href="">
+                        <img src="./images/icon_profile.png" alt="" class="fl">
+                        <p class="fl">계정</p>
+                    </a>
+                </div>
+                <div class="close fr">
+                    <img src="./images/btn_header_close_grey.png" alt="">
+                </div>
+            </div>
+            <div class="contents">
+                <ul>
+                    <li>
+                        <a href="">
+                            <b>호텔</b>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="">
+                            <b>총 숙박요금 계산</b>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="">
+                            이용가이드
+                        </a>
+                    </li>
+                    <li>
+                        <a href="">
+                            위시리스트
+                        </a>
+                    </li>
+                </ul>
+                <div class="btn-wrap cboth">
+                    <a href="" class="fl">
+                        비밀번호 변경
+                    </a>
+                    <a href="" class="fl">
+                        로그아웃
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="serviceguide-wrap">
+        <div class="banner">
+            <div class="text-wrap">
+                <h1>여러 호텔에서 머무르실 계획인가요?</h1>
+                <h2>
+                    스테이플랜에서<br>내 여행기간 총 숙박요금을 한눈에 비교해보세요.
+                </h2>
+            </div>
+        </div>
+        <div class="contents">
+            <div class="title">
+                이용가이드
+            </div>
+            <div class="con-01">
+                <div class="text-wrap cboth">
+                    <div class="left fl">
+                        첫번째,
+                    </div>
+                    <div class="right fl">
+                        <p>
+                            날짜선택
+                        </p>
+                        <p>
+                            여행시작 날짜와<br>인원을 선택합니다.
+                        </p>
+                    </div>
+                </div>
+                <div class="img-wrap">
+                    <img src="./../images/imagesource/m_firstimg.png" alt="">
+                </div>
+            </div>
+            <div class="con-02">
+                <div class="text-wrap cboth">
+                    <div class="left fl">
+                        두번째,
+                    </div>
+                    <div class="right fl">
+                        <p>
+                            호텔입력
+                        </p>
+                        <p>
+                            계획 중인 호텔과<br>숙박일수를 입력합니다.
+                        </p>
+                    </div>
+                </div>
+                <div class="link-wrap cboth">
+                    <p class="fl">
+                        아직 호텔이 정해지지 않았나요?
+                    </p>
+                    <a href="" class="fr">
+                        호텔 찾기
+                    </a>
+                </div>
+                <div class="img-wrap">
+                    <img src="./../images/imagesource/m_secondimg.png" alt="">
+                </div>
+            </div>
+            <div class="con-03">
+                <div class="text-wrap cboth">
+                    <div class="left fl">
+                        세번쨰,
+                    </div>
+                    <div class="right fl">
+                        <p>
+                            요금확인
+                        </p>
+                        <p>
+                            모든 플랜을<br>계산&비교 합니다.
+                        </p>
+                    </div>
+                </div>
+                <div class="img-wrap">
+                    <img src="./../images/imagesource/m_thirdimg.png" alt="">
+                </div>
+            </div>
+        </div>
+        <div class="intro-img-wrap">
+            <div class="top">
+                <img src="./images/img_planmain_contents_1.png" alt="">
+            </div>
+            <div class="middle">
+                <p class="text">
+                    <span style="color: #ea5416;">한눈에 비교</span><br>다양한 호텔의 요금조합을<br>한눈에 비교하세요
+                </p>
+                <img src="./images/img_planmain_contents_2.png" alt="">
+            </div>
+            <div class="btm">
+                <p class="text">
+                    알고 계셨나요?<br><span style="color: #ea5416;">날짜마다 변동되는 가격!</span>
+                </p>
+                <p class="small-text">
+                    숙박 순서에 따라<br>변동되는 호텔 가격을 체크해 보세요.
+                </p>
+                <img src="./images/mo_img_planmain_contents_3.png" alt="">
+            </div>
+        </div>
+        <div class="calc-banner">
+            <p>
+                <b>스테이플랜에서 클릭만으로</b><br>가장 저렴한 요금조합을 확인해보세요
+            </p>
+            <a href="">
+                바로 계산해보기
+            </a>
+        </div>
+    </div>
+    <div id="footer">
+        <div class="footer-wrap">
+            <div class="navi-wrap">
+                <ul>
+                    <li>
+                        <a href="">
+                            이용가이드
+                        </a>
+                    </li>
+                    <li>
+                        <a href="">
+                            이용약관
+                        </a>
+                    </li>
+                    <li>
+                        <a href="">
+                            개인정보보호정책
+                        </a>
+                    </li>
+                </ul>
+            </div>
+            <div class="info-wrap">
+                <p>
+                    주소: 서울시 중구 청계천로 8층<br>
+                    사업자등록번호: 217-81-38971<br>
+                    통신판매업신고번호: 2018-서울중구-1932
+                </p>
+                <p>
+                    Contact: biz@stayplan.me
+                </p>
+            </div>
+            <div class="sns-wrap">
+                <ul>
+                    <li>
+                        <a href="" class="blog">
+                            블로그
+                        </a>
+                    </li>
+                    <li>
+                        <a href="" class="insta">
+                            인스타그램
+                        </a>
+                    </li>
+                    <li>
+                        <a href="" class="face">
+                            페이스북
+                        </a>
+                    </li>
+                </ul>
+            </div>
+            <div class="right">
+                <p>
+                    Copyright ⓒ 2019 by stayplan.me All Rights Reserved.
+                </p>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>

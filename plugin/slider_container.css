@@ -1,0 +1,162 @@
+/* This line can be removed it was just for display on CodePen: */
+.slider-container {
+    box-sizing: border-box;
+    margin-top: 24px;
+    margin-left: 30px;
+    margin-right: 45px;
+    width: calc(100% - 75px);
+}
+
+.slider-labels {
+    width: 300px;
+    margin:0 auto 31px auto;
+}
+.slider-labels > div > span {
+    font-size: 20px;
+  font-weight: bold;
+    color: #ea5416;
+}
+
+/* Functional styling;
+ * These styles are required for noUiSlider to function.
+ * You don't need to change these rules to apply your design.
+ */
+.slider-container .noUi-target,.slider-container .noUi-target * {
+  -webkit-touch-callout: none;
+  -webkit-user-select: none;
+  -ms-touch-action: none;
+  touch-action: none;
+  -ms-user-select: none;
+  -moz-user-select: none;
+  user-select: none;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+.slider-container .noUi-target {
+  position: relative;
+  direction: ltr;
+}
+
+.slider-container .noUi-base {
+  width: 100%;
+  height: 100%;
+  position: relative;
+  z-index: 1;
+    cursor: pointer;
+/* Fix 401 */
+}
+
+.slider-container .noUi-origin {
+  position: absolute;
+  right: 0;
+  top: 0;
+  left: 0;
+  bottom: 0;
+}
+
+.slider-container .noUi-handle {
+  position: relative;
+  z-index: 1;
+}
+
+.slider-container .noUi-stacking .noUi-handle {
+/* This class is applied to the lower origin when
+   its values is > 50%. */
+  z-index: 10;
+}
+
+.slider-container .noUi-state-tap .noUi-origin {
+  -webkit-transition: left 0.3s,top .3s;
+  transition: left 0.3s,top .3s;
+}
+
+.slider-container .noUi-state-drag * {
+  cursor: inherit !important;
+}
+
+/* Painting and performance;
+ * Browsers can paint handles in their own layer.
+ */
+.slider-container .noUi-base,.noUi-handle {
+  -webkit-transform: translate3d(0,0,0);
+  transform: translate3d(0,0,0);
+}
+
+/* Slider size and handle placement;
+ */
+.slider-container .noUi-horizontal {
+  height: 4px;
+}
+
+.slider-container .noUi-horizontal .noUi-handle {
+  width: 24px;
+  height: 24px;
+  border-radius: 50%;
+  left: -7px;
+  top: -12px;
+  background-color: #fff;
+  border: 1px solid #150c40;
+    cursor: pointer;
+}
+
+/* Styling;
+ */
+.slider-container .noUi-background {
+  background: #D6D7D9;
+    cursor: pointer;
+}
+
+.slider-container .noUi-connect {
+  background: #150c40;
+  -webkit-transition: background 450ms;
+  transition: background 450ms;
+    cursor: pointer;
+}
+
+.slider-container .noUi-origin {
+  border-radius: 2px;
+}
+
+.slider-container .noUi-target {
+  border-radius: 2px;
+}
+
+.slider-container .noUi-target.noUi-connect {
+}
+
+/* Handles and cursors;
+ */
+.slider-container .noUi-draggable {
+  cursor: w-resize;
+}
+
+.slider-container .noUi-vertical .noUi-draggable {
+  cursor: n-resize;
+}
+
+.slider-container .noUi-handle {
+  cursor: default;
+  -webkit-box-sizing: content-box !important;
+  -moz-box-sizing: content-box !important;
+  box-sizing: content-box !important;
+}
+
+.slider-container .noUi-handle:active {
+  border: 8px solid #345DBB;
+  border: 8px solid rgba(53,93,187,0.38);
+  -webkit-background-clip: padding-box;
+  background-clip: padding-box;
+  left: -17px;
+  top: -17px;
+}
+
+/* Disabled state;
+ */
+.slider-container [disabled].noUi-connect,[disabled] .noUi-connect {
+  background: #ddd;
+}
+
+.slider-container [disabled].noUi-origin,[disabled] .noUi-handle {
+  cursor: not-allowed;
+}

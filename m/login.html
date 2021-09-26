@@ -1,0 +1,269 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.1//EN" "http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="ko">
+
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=0" />
+    <title>stayplan</title>
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
+    <link href="./../css/swiper.css" rel="stylesheet" type="text/css" />
+    <link href="./../css/default.css" rel="stylesheet" type="text/css" />
+    <link href="./css/datepicker.css" rel="stylesheet" type="text/css" />
+    <script type="text/javascript" src="./../js/swiper.js"></script>
+    <script type="text/javascript" src="./js/datepicker.js"></script>
+    <script type="text/javascript" src="./js/layout.js"></script>
+    <!--mobile css-->
+    <link href="./css/layout.css" rel="stylesheet" type="text/css" />
+</head>
+
+<body>
+    <div id="header">
+        <div class="header-wrap cboth">
+            <div class="logo fl">
+                <img src="./images/header_logo.png" alt="">
+            </div>
+            <div class="menu fr">
+                <img src="./images/bt_menu.gif" alt="">
+            </div>
+        </div>
+        <div class="header-contents">
+            <div class="top cboth">
+                <div class="title fl cboth login-action">
+                    <img src="./images/icon_profile.png" alt="" class="fl">
+                    <p class="fl">로그인하세요</p>
+                </div>
+                <div class="close fr">
+                    <img src="./images/btn_header_close_grey.png" alt="">
+                </div>
+            </div>
+            <div class="contents">
+                <ul>
+                    <li>
+                        <a href="">
+                            <b>호텔</b>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="">
+                            <b>총 숙박요금 계산</b>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="">
+                            이용가이드
+                        </a>
+                    </li>
+                    <li>
+                        <a href="">
+                            위시리스트
+                        </a>
+                    </li>
+                    <li class="login-action">
+                        <a href="#login">
+                            로그인
+                        </a>
+                    </li>
+                    <li class="sign-action">
+                        <a href="#sign">
+                            회원가입
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="login-pop">
+            <div class="top cboth">
+                <p class="text fl">로그인</p>
+                <button class="close fr">
+                    <img src="./images/btn_layerpopup_close.png" alt="">
+                </button>
+            </div>
+            <div class="input-module">
+                <div class="sns-login">
+                    <a href="">
+                        <b>네이버 계정</b>으로 로그인
+                    </a>
+                    <a href="">
+                        <b>카카오 계정</b>으로 로그인
+                    </a>
+                </div>
+                <div class="line">
+                    또는
+                </div>
+                <div class="input-wrap">
+                    <form action="">
+                        <ul>
+                            <li>
+                                <input type="text" placeholder="이메일주소 입력">
+                            </li>
+                            <li>
+                                <!--<li class="pw-x"></li>-->
+                                <input type="password" placeholder="비밀번호 입력">
+                            </li>
+                            <li class="pw-find-btn">
+                                <a href="#pw-find">
+                                    비밀번호를 잊으셨나요?
+                                </a>
+                                <div class="box">
+                                    <input type="submit" value="로그인">
+                                </div>
+                            </li>
+                        </ul>
+                    </form>
+                </div>
+            </div>
+            <div class="sign-wrap cboth">
+                <p class="fl text">
+                    아직 계정이 없으신가요?
+                </p>
+                <a href="#sign" class="fr sign-action">
+                    회원가입
+                </a>
+            </div>
+        </div>
+
+        <div class="pw-find-pop">
+            <div class="top cboth">
+                <p class="text fl">비밀번호 변경</p>
+                <button class="close fr">
+                    <img src="./images/btn_layerpopup_close.png" alt="">
+                </button>
+            </div>
+            <div class="input-wrap">
+                <p>아래 이메일 주소로<br>비밀번호 <span>재설정 링크</span>를 보내드립니다.</p>
+                <div class="email">
+                    <input type="text" id="pw-email-input" placeholder="이메일주소 입력">
+                </div>
+                <div class="btn-wrap">
+                    <button href="">
+                        재설정 메일 발송
+                    </button>
+                </div>
+            </div>
+            <div class="sign-wrap cboth">
+                <p class="fl text">
+                    아직 계정이 없으신가요?
+                </p>
+                <a href="#sign" class="fr sign-action">
+                    회원가입
+                </a>
+            </div>
+            <div class="complete">
+                <p>이메일 발송 완료</p>
+                <p>
+                    수신한 메일의 링크에서<br>비밀번호를 재설정하세요.
+                </p>
+            </div>
+        </div>
+
+        <div class="sign-pop">
+            <div class="top cboth">
+                <p class="text fl">회원가입</p>
+                <button class="close fr">
+                    <img src="./images/btn_layerpopup_close.png" alt="">
+                </button>
+            </div>
+            <div class="input-module">
+                <div class="sns-login">
+                    <a href="">
+                        <b>네이버 계정</b>으로 회원가입
+                    </a>
+                    <a href="">
+                        <b>카카오 계정</b>으로 회원가입
+                    </a>
+                </div>
+                <div class="line">
+                    또는
+                </div>
+                <div class="input-wrap">
+                    <form action="">
+                        <ul>
+                            <li>
+                                <!--<li class="email-x">-->
+                                <input type="text" placeholder="이메일주소 입력">
+                            </li>
+                            <li>
+                                <input type="password" placeholder="비밀번호 입력(6자 이상)">
+                            </li>
+                            <li>
+                                <input type="password" placeholder="비밀번호 확인">
+                            </li>
+                            <li class="cboth">
+                                <div class="check-wrap fl">
+                                    <input type="checkbox" id="sign-check" style="display: none;">
+                                    <label for="sign-check"></label>
+                                </div>
+                                <p class="fl">
+                                    스테이플랜의 <span>이용약관</span>과 <span>개인정보 보호정책</span>에 모두 동의합니다.
+                                </p>
+                            </li>
+                            <li class="cboth">
+                                <input type="submit" value="회원가입">
+                            </li>
+                        </ul>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div id="footer">
+        <div class="footer-wrap">
+            <div class="navi-wrap">
+                <ul>
+                    <li>
+                        <a href="">
+                            이용가이드
+                        </a>
+                    </li>
+                    <li>
+                        <a href="">
+                            이용약관
+                        </a>
+                    </li>
+                    <li>
+                        <a href="">
+                            개인정보보호정책
+                        </a>
+                    </li>
+                </ul>
+            </div>
+            <div class="info-wrap">
+                <p>
+                    주소: 서울시 중구 청계천로 8층<br>
+                    사업자등록번호: 217-81-38971<br>
+                    통신판매업신고번호: 2018-서울중구-1932
+                </p>
+                <p>
+                    Contact: biz@stayplan.me
+                </p>
+            </div>
+            <div class="sns-wrap">
+                <ul>
+                    <li>
+                        <a href="" class="blog">
+                            블로그
+                        </a>
+                    </li>
+                    <li>
+                        <a href="" class="insta">
+                            인스타그램
+                        </a>
+                    </li>
+                    <li>
+                        <a href="" class="face">
+                            페이스북
+                        </a>
+                    </li>
+                </ul>
+            </div>
+            <div class="right">
+                <p>
+                    Copyright ⓒ 2019 by stayplan.me All Rights Reserved.
+                </p>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>

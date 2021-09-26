@@ -1,0 +1,495 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.1//EN" "http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="ko">
+
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=0" />
+    <title>stayplan</title>
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
+    <link href="./css/swiper.css" rel="stylesheet" type="text/css" />
+    <link href="./css/datepicker.css" rel="stylesheet" type="text/css" />
+    <link href="./css/default.css" rel="stylesheet" type="text/css" />
+    <link href="./css/layout.css" rel="stylesheet" type="text/css" />
+    <script type="text/javascript" src="./js/script.js"></script>
+    <script type="text/javascript" src="./js/swiper.js"></script>
+    <script type="text/javascript" src="./js/datepicker.js"></script>
+    <script type="text/javascript" src="./js/index.js"></script>
+    <link href="./css/index.css" rel="stylesheet" type="text/css" />
+</head>
+
+<body>
+    <div id="wrap">
+        <!--header-->
+        <div id="header">
+            <!--wrap-->
+            <div class="wrap">
+                <h1><a href="index.html"><img src="./images/header_logo.png" alt="stayplan" /></a></h1>
+                <a href="#self" id="bt_menu"><i></i><i></i><i></i><i></i>메뉴열기</a>
+                <!--menu-->
+                <div id="menu">
+                    <a href="#self" class="bt_close">메뉴닫기</a>
+                    <ul class="tm">
+                        <li class="pc login"><a href="#self">로그인</a></li>
+                        <li class="mo"><a href="#self" class="bt_account">로그인하세요</a></li>
+                    </ul>
+                    <ul class="gnb_l">
+                        <li><a href="#self">호텔</a></li>
+                        <li><a href="#self">총 숙박요금 계산</a></li>
+                    </ul>
+                    <ul class="gnb_r">
+                        <li><a href="#self">이용가이드</a></li>
+                        <li><a href="#self">위시리스트</a></li>
+                    </ul>
+                </div>
+                <!--//menu-->
+            </div>
+            <!--//wrap-->
+
+            <div class="login-pop">
+                <div class="top cboth">
+                    <p class="text fl">로그인</p>
+                    <button class="close fr">
+                        <img src="./images/btn_layerpopup_close.png" alt="">
+                    </button>
+                </div>
+                <div class="input-module">
+                    <div class="sns-login">
+                        <a href="">
+                            <b>네이버 계정</b>으로 로그인
+                        </a>
+                        <a href="">
+                            <b>카카오 계정</b>으로 로그인
+                        </a>
+                    </div>
+                    <div class="line">
+                        또는
+                    </div>
+                    <div class="input-wrap">
+                        <form action="">
+                            <ul>
+                                <li>
+                                    <input type="text" placeholder="이메일주소 입력">
+                                </li>
+                                <li class="pw-x">
+                                    <input type="password" placeholder="비밀번호 입력">
+                                </li>
+                                <li class="cboth">
+                                    <a href="#pw-find" class="fl">
+                                        비밀번호를 잊으셨나요?
+                                    </a>
+                                    <input type="submit" value="로그인" class="fr">
+                                </li>
+                            </ul>
+                        </form>
+                    </div>
+                </div>
+                <div class="sign-wrap cboth">
+                    <p class="fl text">
+                        아직 계정이 없으신가요?
+                    </p>
+                    <a href="#sign" class="fr">
+                        회원가입
+                    </a>
+                </div>
+            </div>
+            <div class="pw-find-pop">
+                <div class="top cboth">
+                    <p class="text fl">비밀번호 변경</p>
+                    <button class="close fr">
+                        <img src="./images/btn_layerpopup_close.png" alt="">
+                    </button>
+                </div>
+                <div class="input-wrap">
+                    <p>아래 이메일 주소로 비밀번호 <span>재설정 링크</span>를 보내드립니다.</p>
+                    <div class="email">
+                        <input type="text" id="pw-email-input" placeholder="이메일주소 입력">
+                    </div>
+                    <div class="btn-wrap">
+                        <button href="">
+                            재설정 메일 발송
+                        </button>
+                    </div>
+                </div>
+                <div class="complete">
+                    <p>이메일 발송 완료</p>
+                    <p>
+                        수신한 메일의 링크에서<br>비밀번호를 재설정하세요.
+                    </p>
+                </div>
+            </div>
+            <div class="sign-pop">
+                <div class="top cboth">
+                    <p class="text fl">회원가입</p>
+                    <button class="close fr">
+                        <img src="./images/btn_layerpopup_close.png" alt="">
+                    </button>
+                </div>
+                <div class="input-module">
+                    <div class="sns-login">
+                        <a href="">
+                            <b>네이버 계정</b>으로 회원가입
+                        </a>
+                        <a href="">
+                            <b>카카오 계정</b>으로 회원가입
+                        </a>
+                    </div>
+                    <div class="line">
+                        또는
+                    </div>
+                    <div class="input-wrap">
+                        <form action="">
+                            <ul>
+                                <li class="email-x">
+                                    <input type="text" placeholder="이메일주소 입력">
+                                </li>
+                                <li>
+                                    <input type="password" placeholder="비밀번호 입력(6자 이상)">
+                                </li>
+                                <li>
+                                    <input type="password" placeholder="비밀번호 확인">
+                                </li>
+                                <li class="cboth">
+                                    <div class="check-wrap fl">
+                                        <input type="checkbox" id="sign-check" style="display: none;">
+                                        <label for="sign-check"></label>
+                                    </div>
+                                    <p class="fl">
+                                        스테이플랜의 <span>이용약관</span>과 <span>개인정보 보호정책</span>에 모두 동의합니다.
+                                    </p>
+                                </li>
+                                <li class="cboth">
+                                    <input type="submit" value="회원가입">
+                                </li>
+                            </ul>
+                        </form>
+                    </div>
+                </div>
+            </div>
+            <div class="bg"></div>
+        </div>
+        <!--//header-->
+        <!--main_contents-->
+        <div id="main_contents">
+            <!--wrap-->
+            <div class="wrap">
+                <!--mt_area-->
+                <div class="mt_area">
+                    <h2>어디로 떠나시나요?</h2>
+                    <ul class="m_menu">
+                        <li class="on"><a href="index.html">호텔</a></li>
+                        <li><a href="index2.html">총 숙박요금 계산</a></li>
+                    </ul>
+                    <div class="info_box">
+                        <dl class="area">
+                            <dt>도시 또는 지역명</dt>
+                            <dd><input type="text" /></dd>
+                            <div class="area-auto">
+                                <ul>
+                                    <li>
+                                        <div class="container">
+                                            <div class="icon-wrap">
+                                                <img src="./images/icon_search_wish.png" alt="">
+                                            </div>
+                                            <div class="text-wrap">
+                                                <h2><span style="color:#ea5146;">더 아</span>트스테이 제주 함덕 호텔(구.골든튤립)</h2>
+                                                <p>노보리베츠, 일본</p>
+                                            </div>
+                                        </div>
+                                    </li>
+                                    <li>
+                                        <div class="container">
+                                            <div class="icon-wrap">
+                                                <img src="./images/icon_search_seen.png" alt="">
+                                            </div>
+                                            <div class="text-wrap">
+                                                <h2>더 아남 디럭스 콜렉션</h2>
+                                                <p>노보리베츠, 일본</p>
+                                            </div>
+                                        </div>
+                                    </li>
+                                    <li>
+                                        <div class="container">
+                                            <div class="icon-wrap">
+                                                <img src="./images/icon_search_spot.png" alt="">
+                                            </div>
+                                            <div class="text-wrap">
+                                                <h2>다낭</h2>
+                                                <p>베트남</p>
+                                            </div>
+                                        </div>
+
+                                    </li>
+                                    <li>
+                                        <div class="container">
+                                            <div class="icon-wrap">
+                                                <img src="./images/icon_search_hotel.png" alt="">
+                                            </div>
+                                            <div class="text-wrap">
+                                                <h2>더 아웃포스트 호텔 센토사 바이 파 이스트 호스피탈리티</h2>
+                                                <p>노보리베츠, 일본</p>
+                                            </div>
+                                        </div>
+                                    </li>
+                                    <li>
+                                        <div class="container">
+                                            <div class="icon-wrap">
+                                                <img src="./images/icon_search_hotel.png" alt="">
+                                            </div>
+                                            <div class="text-wrap">
+                                                <h2>더 아웃포스트 호텔 센토사 바이 파 이스트 호스피탈리티</h2>
+                                                <p>노보리베츠, 일본</p>
+                                            </div>
+                                        </div>
+                                    </li>
+                                </ul>
+                            </div>
+                        </dl>
+                        <dl class="date in">
+                            <dt>체크인</dt>
+                            <dd><input type="text" class="form-control" name="date" id="date" data-select="datepicker" /></dd>
+                        </dl>
+                        <dl class="date out">
+                            <dt>체크아웃</dt>
+                            <dd><input type="text" class="form-control" name="date" id="date" data-select="datepicker" /></dd>
+                            <span class="day">
+                                8박
+                            </span>
+                        </dl>
+                        <dl class="pp_number">
+                            <dt>인원 수</dt>
+                            <dd><input type="text" readonly="readonly" /></dd>
+                            <div class="people-select">
+                                <div class="container">
+                                    <ul>
+                                        <li class="people-type">
+                                            <div class="name">
+                                                성인
+                                            </div>
+                                            <div class="input-wrap">
+                                                <span class="input-number-decrement"></span><input class="input-number_01" type="numer" value="0명" min="0" max="100"><span class="input-number-increment"></span>
+                                            </div>
+                                        </li>
+                                        <li class="people-type">
+                                            <div class="name">
+                                                아동
+                                            </div>
+                                            <div class="input-wrap">
+                                                <span class="input-number-decrement"></span><input class="input-number_02" type="numer" value="0명" min="0" max="100"><span class="input-number-increment"></span>
+                                            </div>
+                                        </li>
+                                        <li class="people-age">
+                                            <div class="name">
+                                                아동1 나이
+                                            </div>
+                                            <div class="input-wrap">
+                                                <select name="" class="input-number-03">
+                                                    <option value="1">1세</option>
+                                                    <option value="2">2세</option>
+                                                    <option value="3">3세</option>
+                                                    <option value="4">4세</option>
+                                                    <option value="5">5세</option>
+                                                    <option value="6">6세</option>
+                                                    <option value="7">7세</option>
+                                                    <option value="8">8세</option>
+                                                    <option value="9">9세</option>
+                                                    <option value="10">10세</option>
+                                                    <option value="11">11세</option>
+                                                    <option value="12">12세</option>
+                                                    <option value="13">13세</option>
+                                                    <option value="14">14세</option>
+                                                    <option value="15">15세</option>
+                                                    <option value="16">16세</option>
+                                                    <option value="17">17세</option>
+                                                </select>
+                                            </div>
+                                        </li>
+                                        <li class="people-age">
+                                            <div class="name">
+                                                아동2 나이
+                                            </div>
+                                            <div class="input-wrap">
+                                                <select name="" class="input-number-04">
+                                                    <option value="1">1세</option>
+                                                    <option value="2">2세</option>
+                                                    <option value="3">3세</option>
+                                                    <option value="4">4세</option>
+                                                    <option value="5">5세</option>
+                                                    <option value="6">6세</option>
+                                                    <option value="7">7세</option>
+                                                    <option value="8">8세</option>
+                                                    <option value="9">9세</option>
+                                                    <option value="10">10세</option>
+                                                    <option value="11">11세</option>
+                                                    <option value="12">12세</option>
+                                                    <option value="13">13세</option>
+                                                    <option value="14">14세</option>
+                                                    <option value="15">15세</option>
+                                                    <option value="16">16세</option>
+                                                    <option value="17">17세</option>
+                                                </select>
+                                            </div>
+                                        </li>
+                                    </ul>
+                                </div>
+                                <div class="complete">
+                                    완료
+                                </div>
+                            </div>
+                        </dl>
+                    </div>
+                    <a href="#self" class="bt_bot bt_search">검색</a>
+                </div>
+                <!--//mt_area-->
+                <!--//mm_area-->
+                <div class="mm_area">
+                    <div class="container">
+                        <ul class="cboth">
+                            <li class="fl">
+                                <div class="img-wrap">
+                                    <img src="./images/img_hotelmain_contents_1.png" alt="">
+                                </div>
+                                <div class="text-wrap">
+                                    <h2>마음에 맞는 숙소를 찾아보세요</h2>
+                                    <p>
+                                        몇 번의 클릭으로<br>
+                                        <b>30만 개 이상</b>의 호텔을 비교하고<br>
+                                        원하는 숙소를 찾아보세요.
+                                    </p>
+                                </div>
+                            </li>
+                            <li class="fl">
+                                <div class="img-wrap">
+                                    <img src="./images/img_hotelmain_contents_2.png" alt="">
+                                </div>
+                                <div class="text-wrap">
+                                    <h2>위시리스트에 담아 두세요</h2>
+                                    <p>
+                                        마음에 드는 호텔은<br>
+                                        위시리스트에 담아두세요.<br>
+                                        총 숙박요금 <b>비교 시 편리</b>해 집니다.
+                                    </p>
+                                </div>
+                            </li>
+                            <li class="fl">
+                                <div class="img-wrap">
+                                    <img src="./images/img_hotelmain_contents_3.png" alt="">
+                                </div>
+                                <div class="text-wrap">
+                                    <h2>한 번에 계산하고 비교하세요</h2>
+                                    <p>
+                                        <b>2곳 이상의 호텔</b>을 이용하시나요?<br>
+                                        어떤 순서대로 머무는 것이 저렴한지<br>
+                                        체크해 보세요.
+                                    </p>
+                                </div>
+                            </li>
+                        </ul>
+                        <div class="link-wrap">
+                            <a href="#calc">
+                                바로 계산해보기
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                <!--//mm_area-->
+                <div class="mb_area">
+                    <h1>인기 여행지</h1>
+                    <ul class="cboth">
+                        <li class="fl">
+                            <a href="">
+                                <img src="./images/sapporo.jpg" alt="">
+                                <p>삿포로</p>
+                                <span class="oval"></span>
+                            </a>
+                        </li>
+                        <li class="fl">
+                            <a href="">
+                                <img src="./images/singapore.jpg" alt="">
+                                <p>싱가포르</p>
+                                <span class="oval"></span>
+                            </a>
+                        </li>
+                        <li class="fl">
+                            <a href="">
+                                <img src="./images/makao.jpg" alt="">
+                                <p>마카오</p>
+                                <span class="oval"></span>
+                            </a>
+                        </li>
+                        <li class="fl">
+                            <a href="">
+                                <img src="./images/jeju.jpg" alt="">
+                                <p>제주도</p>
+                                <span class="oval"></span>
+                            </a>
+                        </li>
+                        <li class="fl">
+                            <a href="">
+                                <img src="./images/busan.jpg" alt="">
+                                <p>부산</p>
+                                <span class="oval"></span>
+                            </a>
+                        </li>
+                        <li class="fl">
+                            <a href="">
+                                <img src="./images/danang.jpg" alt="">
+                                <p>다낭</p>
+                                <span class="oval"></span>
+                            </a>
+                        </li>
+                        <li class="fl">
+                            <a href="">
+                                <img src="./images/taipei.jpg" alt="">
+                                <p>타이페이</p>
+                                <span class="oval"></span>
+                            </a>
+                        </li>
+                        <li class="fl">
+                            <a href="">
+                                <img src="./images/guam.jpg" alt="">
+                                <p>괌</p>
+                                <span class="oval"></span>
+                            </a>
+                        </li>
+                        <li class="fl">
+                            <a href="">
+                                <img src="./images/bangkok.jpg" alt="">
+                                <p>방콕</p>
+                                <span class="oval"></span>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <!--//wrap-->
+        </div>
+        <!--//main_contents-->
+        <!--footer-->
+        <div id="footer">
+            <!--wrap-->
+            <div class="wrap">
+                <ul class="fm">
+                    <li><a href="#self">이용가이드</a></li>
+                    <li><a href="#self">이용약관</a></li>
+                    <li><a href="#self">개인정보보호정책</a></li>
+                </ul>
+                <div class="g_info">
+                    <span>주소: 서울시 중구 청계천로 8층</span>
+                    <span>사업자등록번호: 217-81-38971</span>
+                    <span>통신판매업신고번호: 2018-서울중구-1932</span>
+                </div>
+                <div class="contact">Contact: <a href="mailto:biz@stayplan.me">biz@stayplan.me</a></div>
+                <ul class="f_sns">
+                    <li><a href="#self">블로그</a></li>
+                    <li><a href="#self">인스타그램</a></li>
+                    <li><a href="#self">페이스북</a></li>
+                </ul>
+                <div class="copyright">Copyright ⓒ 2019 by stayplan.me All Rights Reserved.</div>
+            </div>
+            <!--//wrap-->
+        </div>
+        <!--//footer-->
+    </div>
+</body>
+
+</html>
